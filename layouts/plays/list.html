@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="site-shell">
+  <div class="back-bar">
+    <a href="{{ "/" | relURL }}" class="btn-back">&larr; Back home</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="site-shell">
+    <div class="section-rule"><span class="kicker">All Plays</span></div>
+    <h2 class="section-title">The plays themselves</h2>
+    <p class="work-intro">A selection of full-length plays, verse pieces, and site-specific work — some award-winning, some still finding their audience.</p>
+
+    <div class="work-list">
+      {{ range (sort .Pages "Params.weight" "asc") }}
+      <a class="work-item" href="{{ .RelPermalink }}">
+        <div class="work-year">{{ .Params.year }}<br>{{ .Params.form_short | default "Full Play" }}</div>
+        <div>
+          <div class="work-meta">{{ .Params.genre }}</div>
+          <h3>{{ .Title }}</h3>
+          <p class="work-desc">{{ .Params.logline }}</p>
+        </div>
+        {{ with .Params.thumbnail }}<img class="work-thumb" src="{{ . | absURL }}" alt="{{ $.Title }} production still">{{ end }}
+        <div class="work-arrow">&rarr;</div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
