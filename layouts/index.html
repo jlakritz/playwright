@@ -30,9 +30,9 @@
   {{/* SELECTED PLAYS INDEX — pulls from content/plays, ordered by weight/date, limited to "featured" */}}
   <section class="section" id="work">
     <div class="site-shell">
-      <div class="section-rule"><span class="kicker">Selected Plays</span></div>
-      <h2 class="section-title">Plays, not projects.</h2>
-      <p class="work-intro">Original theatre that asks awkward questions, takes its ideas seriously, and occasionally refuses to take anything else seriously.</p>
+      <div class="section-rule"><span class="kicker">{{ .Params.plays_kicker | default "Selected Plays" }}</span></div>
+      <h2 class="section-title">{{ .Params.plays_title | default "Plays, not projects." }}</h2>
+      <p class="work-intro">{{ .Params.plays_lede | default "Original theatre that asks awkward questions, takes its ideas seriously, and occasionally refuses to take anything else seriously." }}</p>
 
       <div class="work-list">
         {{ $plays := where site.RegularPages "Type" "plays" }}
