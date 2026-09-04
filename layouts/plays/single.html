@@ -1,0 +1,109 @@
+{{ define "main" }}
+<div class="site-shell">
+  <div class="back-bar">
+    <a href="{{ "/" | relURL }}#work" class="btn-back">&larr; Back to all works</a>
+  </div>
+
+  <header class="play-header">
+    {{ if .Params.now_playing }}
+    <span class="now-playing-flag"><span class="now-playing-flag__dot"></span>Playing {{ .Params.now_playing_detail }}</span>
+    {{ end }}
+    <div class="kicker">{{ .Params.genre }} &middot; {{ .Params.year }}</div>
+    <h1 class="play-title">{{ .Title }}</h1>
+    {{ with .Params.logline }}<p class="play-subtitle">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="play-grid">
+    <div class="play-main-content">
+
+      {{ with .Params.licensing_status }}
+      <div class="licensing-callout licensing-callout--{{ if eq . "licensed" }}licensed{{ else }}direct{{ end }}">
+        <p class="licensing-callout__title">
+          {{ if eq . "licensed" }}Licensed for production
+          {{ else if eq . "development" }}In development — not yet available
+          {{ else }}Not yet published for licensing{{ end }}
+        </p>
+        <p class="licensing-callout__sub">{{ $.Params.licensing_note }}</p>
+      </div>
+      {{ end }}
+
+      <h2>Synopsis</h2>
+      {{ .Content }}
+
+      {{ with .Params.from_the_desk }}
+      <h2>From the Desk</h2>
+      <p style="font-style:italic; color:#4f4a43;">{{ . }}</p>
+      {{ end }}
+
+      {{ with .Params.gallery }}
+      <h2>Production Photography</h2>
+      <div class="play-gallery">
+        {{ range . }}
+        <div class="play-gallery-item">
+          <img src="{{ .image | absURL }}" alt="{{ .caption | default "Production photograph" }}">
+          {{ with .caption }}<div class="play-gallery-caption">{{ . }}</div>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with .Params.script_excerpt }}
+      <h2>Manuscript Excerpt</h2>
+      <div class="script-box">
+        {{ with .tag }}<div class="script-box-tag">{{ . }}</div>{{ end }}
+        {{ range .lines }}
+          {{ if eq .type "direction" }}<div class="script-dir">({{ .text }})</div>
+          {{ else if eq .type "speaker" }}<div class="script-speaker">{{ .text }}</div>
+          {{ else }}<div class="script-line">{{ .text }}</div>{{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with .Params.production_history }}
+      <h2>Production History</h2>
+      <p style="font-size:1rem; color:var(--muted);">{{ . | markdownify }}</p>
+      {{ end }}
+
+      {{ with .Params.awards }}
+      <h2>Awards &amp; Festivals</h2>
+      {{ range . }}
+      <p style="font-size:0.95rem; margin-bottom:0.6rem;"><strong>{{ .title }}</strong><br><span style="color:var(--muted); font-family:'DM Mono',monospace; font-size:0.8rem;">{{ .venue }}</span></p>
+      {{ end }}
+      {{ end }}
+    </div>
+
+    <aside class="play-sidebar">
+      {{ with .Params.cast_size }}<div class="spec-group"><span class="spec-label">Cast Size</span><div class="spec-value">{{ . }}</div></div>{{ end }}
+      {{ with .Params.running_time }}<div class="spec-group"><span class="spec-label">Running Time</span><div class="spec-value">{{ . }}</div></div>{{ end }}
+      {{ with .Params.form_style }}<div class="spec-group"><span class="spec-label">Form / Style</span><div class="spec-value">{{ . }}</div></div>{{ end }}
+      {{ with .Params.staging }}<div class="spec-group"><span class="spec-label">Staging</span><div class="spec-value">{{ . }}</div></div>{{ end }}
+      {{ with .Params.accolades }}<div class="spec-group"><span class="spec-label">Accolades</span><div class="spec-value">{{ . }}</div></div>{{ end }}
+      {{ with .Params.licensing_status }}
+      <div class="spec-group">
+        <span class="spec-label">Licensing &amp; Scripts</span>
+        <div class="spec-value">
+          {{ if eq . "licensed" }}
+            {{ if eq $.Params.licensor "lazybee" }}Published via Lazy Bee Scripts
+            {{ else if eq $.Params.licensor "stagescripts" }}Published via Stagescripts
+            {{ else }}Licensed for production{{ end }}
+          {{ else if eq . "development" }}In development
+          {{ else }}Manuscript available for perusal{{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      {{ if eq .Params.licensing_status "licensed" }}
+        {{ if eq .Params.licensor "lazybee" }}
+        <a href="{{ site.Params.lazyBeeUrl }}" target="_blank" rel="noopener" class="cta-button">View on Lazy Bee Scripts</a>
+        {{ else if eq .Params.licensor "stagescripts" }}
+        <a href="{{ site.Params.stagescriptsUrl }}" target="_blank" rel="noopener" class="cta-button">View on Stagescripts</a>
+        {{ end }}
+      {{ else if eq .Params.licensing_status "development" }}
+        <a href="mailto:{{ site.Params.email }}?subject=Interest: {{ .Title }}" class="cta-button">Register Interest</a>
+      {{ else }}
+        <a href="mailto:{{ site.Params.email }}?subject=Perusal Script Request: {{ .Title }}" class="cta-button">Request Script PDF</a>
+      {{ end }}
+    </aside>
+  </div>
+</div>
+{{ end }}

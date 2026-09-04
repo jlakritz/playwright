@@ -1,0 +1,263 @@
+media:
+  input: static/uploads
+  output: uploads
+
+content:
+
+  # ==============================================================
+  # HOMEPAGE — hero content and the press quote interlude
+  # ==============================================================
+  - name: homepage
+    label: Homepage
+    type: file
+    path: content/_index.md
+    fields:
+      - name: hero_kicker
+        label: Hero Kicker (small label above the name)
+        type: string
+      - name: hero_title
+        label: Hero Title (HTML allowed, e.g. use <br> for a line break)
+        type: string
+      - name: hero_lede
+        label: Hero Lede Sentence
+        type: string
+      - name: hero_margin_note
+        label: Hero Margin Note (italic aside)
+        type: string
+      - name: hero_photo
+        label: Hero Photo
+        type: image
+      - name: hero_photo_alt
+        label: Hero Photo Alt Text
+        type: string
+      - name: hero_photo_badge
+        label: Hero Photo Badge Text
+        type: string
+      - name: hero_photo_caption_left
+        label: Hero Photo Caption (left)
+        type: string
+      - name: hero_photo_caption_right
+        label: Hero Photo Caption (right)
+        type: string
+      - name: press_quote
+        label: Press Quote / Interlude
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: text
+            label: Quote Text (HTML allowed for <em>)
+            type: string
+          - name: attribution
+            label: Attribution
+            type: string
+
+  # ==============================================================
+  # PLAYS — the core commercial content type
+  # ==============================================================
+  - name: plays
+    label: Plays
+    type: collection
+    path: content/plays
+    filename: "{slug}.md"
+    view:
+      fields:
+        - title
+        - year
+        - licensing_status
+    fields:
+
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: year
+        label: Year
+        type: string
+
+      - name: genre
+        label: Genre / Form Line
+        type: string
+        description: "Shown as the kicker on the play page, e.g. 'Original Play', 'Site-Specific Narrative'"
+
+      - name: form_short
+        label: Short Form Label
+        type: string
+        description: "Shown under the year in the homepage list, e.g. 'Full Play', 'Site-Specific'"
+
+      - name: logline
+        label: Logline
+        type: string
+        description: "One sentence. Used in the homepage work list and as the play page subtitle."
+
+      - name: featured
+        label: Feature on Homepage
+        type: boolean
+        description: "If ON, this play appears in the homepage 'Selected Plays' list. Homepage shows up to 4 featured plays, newest first."
+
+      - name: weight
+        label: Sort Order (lower shows first)
+        type: number
+
+      - name: now_playing
+        label: Currently Playing
+        type: boolean
+        description: "Turn ON only while this production is genuinely on. Powers the site-wide 'Now Playing' banner — it disappears automatically when nothing is marked on."
+
+      - name: now_playing_detail
+        label: Now Playing Detail
+        type: string
+        description: "e.g. '30 July — National Drama Festival, Artrix Theatre'"
+
+      - name: licensing_status
+        label: Licensing Status
+        type: select
+        options:
+          values:
+            - name: direct
+              label: "Direct enquiry (not yet published)"
+            - name: development
+              label: "In development"
+            - name: licensed
+              label: "Licensed / published"
+
+      - name: licensor
+        label: Licensor (only if status is Licensed)
+        type: select
+        options:
+          values:
+            - name: lazybee
+              label: "Lazy Bee Scripts"
+            - name: stagescripts
+              label: "Stagescripts"
+
+      - name: licensing_note
+        label: Licensing Note
+        type: string
+        description: "Short sentence shown in the licensing callout box on the play page."
+
+      - name: cast_size
+        label: Cast Size
+        type: string
+
+      - name: running_time
+        label: Running Time
+        type: string
+
+      - name: form_style
+        label: Form / Style
+        type: string
+
+      - name: staging
+        label: Staging Notes
+        type: string
+
+      - name: accolades
+        label: Accolades
+        type: string
+
+      - name: thumbnail
+        label: Homepage Thumbnail
+        type: image
+        description: "Small image shown next to this play in the homepage list (desktop only)."
+
+      - name: from_the_desk
+        label: "From the Desk (writer's note)"
+        type: text
+
+      - name: gallery
+        label: Production Photography
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - name: caption
+            label: Caption
+            type: string
+
+      - name: script_excerpt
+        label: Manuscript Excerpt
+        type: object
+        fields:
+          - name: tag
+            label: "Act/Scene Tag (e.g. 'Act I — Scene 2')"
+            type: string
+          - name: lines
+            label: Lines
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: Line Type
+                type: select
+                options:
+                  values:
+                    - name: speaker
+                      label: "Speaker name"
+                    - name: line
+                      label: "Dialogue line"
+                    - name: direction
+                      label: "Stage direction"
+              - name: text
+                label: Text
+                type: string
+
+      - name: production_history
+        label: Production History
+        type: text
+
+      - name: awards
+        label: Awards & Festivals
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: "Award / Result"
+            type: string
+          - name: venue
+            label: "Festival / Venue"
+            type: string
+
+      - name: body
+        label: Synopsis (main content)
+        type: rich-text
+
+
+  # ==============================================================
+  # NOTEBOOK — short reflective entries, shown inline on homepage
+  # ==============================================================
+  - name: notebook
+    label: Notebook
+    type: collection
+    path: content/notebook
+    filename: "{slug}.md"
+    view:
+      fields:
+        - title
+        - date
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+      - name: category
+        label: Category
+        type: string
+        description: "e.g. 'Writing', 'Process'"
+      - name: read_time
+        label: Read Time
+        type: string
+        description: "e.g. '6 min read'"
+      - name: summary
+        label: Summary (shown inline on homepage)
+        type: string
+      - name: body
+        label: Full Entry (optional, for future full notebook pages)
+        type: rich-text

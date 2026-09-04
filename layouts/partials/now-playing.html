@@ -1,0 +1,25 @@
+{{/*
+  Now Playing banner.
+  Shows only plays whose "now_playing" field is set to true in their
+  frontmatter. If no plays are currently marked as playing, this
+  partial renders nothing at all — no empty box, no placeholder.
+*/}}
+{{ $current := where (where site.RegularPages "Type" "plays") "Params.now_playing" true }}
+{{ if gt (len $current) 0 }}
+<div class="now-playing-wrap">
+  <div class="site-shell">
+    <div class="now-playing">
+      <div class="now-playing__inner">
+        <span class="now-playing__label"><span class="now-playing__dot"></span>Now Playing</span>
+        <div class="now-playing__items">
+          {{ range $current }}
+          <a href="{{ .RelPermalink }}" class="now-playing__item">
+            <strong>{{ .Title }}</strong> <span>&mdash; {{ .Params.now_playing_detail }}</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — Jamie Lakritz{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Jamie Lakritz is a playwright and theatre maker. Plays produced across the UK festival circuit, published through Lazy Bee Scripts and Stagescripts.{{ end }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+
+{{ partial "header.html" . }}
+
+{{ block "main" . }}{{ end }}
+
+{{ partial "footer.html" . }}
+
+<script>
+  var mm = document.getElementById('mobile-menu');
+  function openMobileMenu(){ mm.classList.add('is-open'); document.body.style.overflow='hidden'; }
+  function closeMobileMenu(){ mm.classList.remove('is-open'); document.body.style.overflow=''; }
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMobileMenu(); });
+</script>
+
+</body>
+</html>

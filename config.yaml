@@ -1,0 +1,28 @@
+baseURL: "https://jamielakritz.co.uk/"
+languageCode: "en-gb"
+title: "Jamie Lakritz — Playwright"
+
+# GitHub Pages serves from the repo root or /docs — this config
+# outputs a plain "public/" folder which the GitHub Actions workflow
+# will publish. No theme is used; everything is custom layouts.
+
+enableRobotsTXT: true
+
+params:
+  email: "hello@jamielakritz.co.uk"
+  brightlightUrl: "https://brightlight-theatre.co.uk"
+  lazyBeeUrl: "https://www.lazybeescripts.co.uk"
+  stagescriptsUrl: "https://www.stagescripts.com"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true   # allows raw HTML (e.g. <em>, <br>) inside markdown fields from the CMS
+
+taxonomies: {}
+
+outputs:
+  home:
+    - HTML
+  page:
+    - HTML

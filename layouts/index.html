@@ -1,0 +1,99 @@
+{{ define "main" }}
+
+{{ partial "now-playing.html" . }}
+
+<main>
+  <section class="masthead">
+    <div class="site-shell masthead-grid">
+      <div>
+        <div class="kicker">{{ .Params.hero_kicker | default "Playwright · Theatre Maker" }}</div>
+        <h1>{{ .Params.hero_title | default "Jamie<br>Lakritz" | safeHTML }}</h1>
+        <p class="lede">{{ .Params.hero_lede | default "Writing plays about people, power, technology, history — and the things we would rather not talk about." }}</p>
+        {{ with .Params.hero_margin_note }}<p class="margin-note">{{ . }}</p>{{ end }}
+      </div>
+
+      {{ with .Params.hero_photo }}
+      <div class="hero-photo-card">
+        <div class="hero-photo-wrap">
+          <img src="{{ . | absURL }}" alt="{{ $.Params.hero_photo_alt | default "Production still" }}">
+          {{ with $.Params.hero_photo_badge }}<span class="hero-photo-badge">{{ . }}</span>{{ end }}
+        </div>
+        <div class="hero-photo-caption">
+          <span>{{ $.Params.hero_photo_caption_left }}</span>
+          <span>{{ $.Params.hero_photo_caption_right }}</span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* SELECTED PLAYS INDEX — pulls from content/plays, ordered by weight/date, limited to "featured" */}}
+  <section class="section" id="work">
+    <div class="site-shell">
+      <div class="section-rule"><span class="kicker">Selected Plays</span></div>
+      <h2 class="section-title">Plays, not projects.</h2>
+      <p class="work-intro">Original theatre that asks awkward questions, takes its ideas seriously, and occasionally refuses to take anything else seriously.</p>
+
+      <div class="work-list">
+        {{ $plays := where site.RegularPages "Type" "plays" }}
+        {{ $featured := where $plays "Params.featured" true }}
+        {{ $toShow := cond (gt (len $featured) 0) $featured $plays }}
+        {{ range first 4 (sort $toShow "Params.year" "desc") }}
+        <a class="work-item" href="{{ .RelPermalink }}">
+          <div class="work-year">{{ .Params.year }}<br>{{ .Params.form_short | default "Full Play" }}</div>
+          <div>
+            <div class="work-meta">{{ .Params.genre }}</div>
+            <h3>{{ .Title }}</h3>
+            <p class="work-desc">{{ .Params.logline }}</p>
+          </div>
+          {{ with .Params.thumbnail }}<img class="work-thumb" src="{{ . | absURL }}" alt="{{ $.Title }} production still">{{ end }}
+          <div class="work-arrow">&rarr;</div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{ with .Params.press_quote }}
+  <section class="interlude">
+    <div class="site-shell interlude-grid">
+      <div class="label">{{ .label | default "Critical Press &amp; Adjudication" | safeHTML }}</div>
+      <blockquote>
+        <p>{{ .text | safeHTML }}</p>
+        <cite>{{ .attribution }}</cite>
+      </blockquote>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* NOTEBOOK — most recent entries shown inline on the homepage */}}
+  <section class="section" id="about">
+    <div class="site-shell notebook-wrap">
+      <div class="notebook-title">
+        <div class="section-rule"><span class="kicker">From the Writer</span></div>
+        <h2>Theatre should leave a mark.</h2>
+        <p style="color:var(--muted); max-width:32ch;">Notes on writing, rehearsal rooms, ideas that refuse to behave, and putting words in front of live audiences.</p>
+      </div>
+      <div class="entries" id="notebook">
+        {{ $notes := where site.RegularPages "Type" "notebook" }}
+        {{ range first 3 (sort $notes "Date" "desc") }}
+        <article class="entry">
+          <div class="entry-meta">{{ .Params.category | default "Writing" }} &middot; {{ .Params.read_time | default "5 min read" }}</div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary }}</p>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="final-note" id="contact">
+    <div class="site-shell">
+      <div class="kicker">Inquiries &amp; Scripts</div>
+      <h2>Let's make something interesting.</h2>
+      <p>Full scripts, perusal copies, performance licenses, readings, or a conversation about a new piece.</p>
+      <a class="contact-link" href="mailto:{{ site.Params.email }}">Get in touch via email</a>
+    </div>
+  </section>
+</main>
+{{ end }}
