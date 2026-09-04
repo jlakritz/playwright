@@ -3,7 +3,7 @@ title: "Jamie Lakritz — Playwright"
 
 hero_kicker: "Playwright · Theatre Maker"
 hero_title: "Jamie<br>Lakritz"
-hero_lede: "Writing plays about xyz people, power, technology, history — and the things we would rather not talk about."
+hero_lede: "Writing plays. edge-of-your-seat ones, shed-a-tear ones, laugh-out-loud ones, short ones, long ones, funny ones, sad ones. Lots of ones."
 hero_margin_note: "A body of work somewhere between the uncomfortable question and the badly timed laugh."
 
 hero_photo: "uploads/hero/aviary-hero.jpg"
