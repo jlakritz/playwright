@@ -12,6 +12,10 @@ hero_photo_badge: "Staged Production"
 hero_photo_caption_left: "The Aviary — Artrix Theatre"
 hero_photo_caption_right: "NDF Selection 2026"
 
+plays_kicker: "Selected Plays"
+plays_title: "The plays themselves"
+plays_lede: "The plays I'm most often asked about, from festival premieres to published scripts."
+
 press_quote:
   label: "Critical Press &amp; Adjudication"
   text: "\"Jamie Lakritz leaves you <em>forever</em> on the edge of your seat.\""
