@@ -52,7 +52,7 @@
         {{ end }}
       </div>
 
-      {{ if gt (len (where site.RegularPages "Type" "plays")) 4 }}
+      {{ if gt (len (where site.RegularPages "Type" "plays")) 3 }}
       <p style="margin-top:2rem;"><a href="{{ "/plays/" | relURL }}" class="btn-back" style="display:inline-flex;">See all plays &rarr;</a></p>
       {{ end }}
     </div>
