@@ -70,6 +70,8 @@
   </section>
   {{ end }}
 
+
+ {{ if gt (len (where site.RegularPages "Type" "notebook")) 0 }}
   {{/* NOTEBOOK — most recent entries shown inline on the homepage */}}
   <section class="section" id="about">
     <div class="site-shell notebook-wrap">
@@ -90,6 +92,8 @@
       </div>
     </div>
   </section>
+{{ end }}
+
 
   <section class="final-note" id="contact">
     <div class="site-shell">
