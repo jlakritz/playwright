@@ -16,6 +16,10 @@ plays_kicker: "Selected Plays"
 plays_title: "A few things I've written..."
 plays_lede: "The plays I get asked about most, from festival favourites to crowd-pleasing comedies."
 
+contact_kicker: "Get in touch"
+contact_title: "Let's make something spectacular"
+contact_lede: "Questions about my work, performance licenses, readings, or a conversation about a new piece."
+
 press_quote:
   label: "Critical Press &amp; Adjudication"
   text: "\"Jamie Lakritz leaves you <em>forever</em> on the edge of your seat.\""

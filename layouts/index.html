@@ -97,9 +97,9 @@
 
   <section class="final-note" id="contact">
     <div class="site-shell">
-      <div class="kicker">Inquiries &amp; Scripts</div>
-      <h2>Let's make something interesting.</h2>
-      <p>Full scripts, perusal copies, performance licenses, readings, or a conversation about a new piece.</p>
+      <div class="kicker">{{ .Params.contact_kicker | default "Inquiries &amp; Scripts" }}</div>
+      <h2>{{ .Params.contact_title | default "Let's make something interesting." }}</h2>
+      <p>{{ .Params.contact_lede | default "Full scripts, perusal copies, performance licenses, readings, or a conversation about a new piece." }}</p>
       <a class="contact-link" href="mailto:{{ site.Params.email }}">Get in touch via email</a>
     </div>
   </section>
