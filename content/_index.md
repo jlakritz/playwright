@@ -13,8 +13,8 @@ hero_photo_caption_left: "The Aviary — Artrix Theatre"
 hero_photo_caption_right: "NDF Selection 2026"
 
 plays_kicker: "Selected Plays"
-plays_title: "The plays themselves"
-plays_lede: "The plays I'm most often asked about, from festival premieres to published scripts."
+plays_title: "A few of the things I've written..."
+plays_lede: "The plays I get asked about most, from festival favourites to crowd-pleasing comedies."
 
 press_quote:
   label: "Critical Press &amp; Adjudication"
