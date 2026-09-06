@@ -3,8 +3,8 @@
     <a class="wordmark" href="{{ "/" | relURL }}">Jamie Lakritz</a>
     <nav class="site-nav">
       <a href="{{ "/" | relURL }}#work" {{ if .IsHome }}class="is-active"{{ end }}>Works</a>
-      <a href="{{ "/#about" | relURL }}">About</a>
-      <a href="{{ "/#notebook" | relURL }}">Notebook</a>
+      <a href="{{ "/about" | relURL }}">About</a>
+     <!-- <a href="{{ "/#notebook" | relURL }}">Notebook</a>-->
       <a href="{{ "/#contact" | relURL }}">Contact</a>
     </nav>
     <button class="nav-toggle" aria-label="Menu" onclick="openMobileMenu()">
@@ -22,8 +22,8 @@
   </div>
   <div class="mobile-menu__links">
     <a href="{{ "/" | relURL }}#work" onclick="closeMobileMenu()">Works</a>
-    <a href="{{ "/#about" | relURL }}" onclick="closeMobileMenu()">About</a>
-    <a href="{{ "/#notebook" | relURL }}" onclick="closeMobileMenu()">Notebook</a>
-    <a href="{{ "/#contact" | relURL }}" onclick="closeMobileMenu()">Contact</a>
+    <a href="{{ "/about" | relURL }}" onclick="closeMobileMenu()">About</a>
+    <!--<a href="{{ "/#notebook" | relURL }}" onclick="closeMobileMenu()">Notebook</a>-->
+    <a href="{{ "/" | relURL }}#contact" onclick="closeMobileMenu()">Contact</a>
   </div>
 </div>
