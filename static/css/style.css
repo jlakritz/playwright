@@ -78,7 +78,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
 @media (min-width: 700px) { .now-playing__inner { flex-direction: row; align-items: center; gap: 2rem; } .now-playing__items { flex-direction: row; gap: 2rem; flex: 1; } }
 
 /* Hero Masthead — mobile-first stack, desktop grid */
-.masthead { padding: 2.4rem 0 3rem; border-bottom: 1px solid var(--line); }
+.masthead { padding: 2.4rem 0 1rem; border-bottom: 0px solid var(--line); }
 .masthead-grid { display: grid; grid-template-columns: 1fr; gap: 2.4rem; align-items: center; }
 .masthead h1 { font-size: clamp(3rem, 15vw, 7.5rem); line-height: 0.88; letter-spacing: -0.03em; margin: 0.7rem 0 1rem; }
 .lede { font-size: clamp(1.1rem, 4.5vw, 1.6rem); max-width: 32ch; margin: 0; }
@@ -91,7 +91,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
 .hero-photo-caption { display: flex; justify-content: space-between; align-items: center; padding-top: 0.6rem; font-family: "DM Mono", monospace; font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; gap: 0.5rem; }
 
 @media (min-width: 900px) {
-  .masthead { padding: 5rem 0 6rem; }
+  .masthead { padding: 5rem 0 3rem; }
   .masthead-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
   .margin-note { margin-top: 1.8rem; }
 }
