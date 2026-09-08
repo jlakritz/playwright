@@ -3,6 +3,12 @@ title: "About"
 subtitle: "Jamie who?"
 layout: "about"
 
+hero_photo: uploads/Songkeeper.jpg
+hero_photo_alt: Songkeeper at the National Drama Festival 2025
+hero_photo_badge: Songkeeper
+hero_photo_caption_left: National Drama Festival 2025
+hero_photo_caption_right: Front of House Photography
+
 credits:
   - "Winner, **Best New Play**, Woking Drama Festival (regular winner)"
   - "Winner, **Derek Jacobi Playwriting Award** — *The Start of Something*, 2017"

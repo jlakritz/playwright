@@ -12,6 +12,20 @@
 
   <div class="play-grid">
     <div class="play-main-content">
+
+  {{ with .Params.hero_photo }}
+      <div class="hero-photo-card">
+        <div class="hero-photo-wrap">
+          <img src="{{ . | absURL }}" alt="{{ $.Params.hero_photo_alt | default "Production still" }}">
+          {{ with $.Params.hero_photo_badge }}<span class="hero-photo-badge">{{ . }}</span>{{ end }}
+        </div>
+        <div class="hero-photo-caption">
+          <span>{{ $.Params.hero_photo_caption_left }}</span>
+          <span>{{ $.Params.hero_photo_caption_right }}</span>
+        </div>
+      </div>
+      {{ end }}
+
       {{ .Content }}
     </div>
 
