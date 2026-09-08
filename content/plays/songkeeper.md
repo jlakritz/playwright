@@ -1,19 +1,19 @@
 ---
 title: "Songkeeper"
 year: "2025"
-genre: "Chamber Drama"
+genre: "Drama"
 form_short: "Two-Hander"
 logline: "A quiet, tense two-hander about folk music, family inheritance, and what happens when the song is remembered wrong."
 featured: true
 weight: 3
 
 licensing_status: "licensed"
-licensor: "lazybee"
+licensor: "stagescripts"
 licensing_note: "Published and available to license now."
 
-cast_size: "2 Actors (1W, 1M)"
+cast_size: "2 Actors (2M)"
 running_time: "45 Minutes"
-form_style: "Chamber Drama"
+form_style: "Drama"
 accolades: "National Drama Festival Finalist, 2025"
 
 thumbnail: "uploads/plays/songkeeper-thumb.jpg"
