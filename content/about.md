@@ -2,12 +2,13 @@
 title: "About"
 subtitle: "Jamie who?"
 layout: "about"
+kicker: "Playwright · Theatre Maker"
 
-hero_photo: uploads/Songkeeper.jpg
-hero_photo_alt: Songkeeper at the National Drama Festival 2025
-hero_photo_badge: Songkeeper
-hero_photo_caption_left: National Drama Festival 2025
-hero_photo_caption_right: Front of House Photography
+hero_photo: uploads/Jamie.jpg
+hero_photo_alt: Jamie Lakritz
+hero_photo_badge: Jamie Lakritz
+hero_photo_caption_left: 
+hero_photo_caption_right:
 
 credits:
   - "Winner, **Best New Play**, Woking Drama Festival (regular winner)"
