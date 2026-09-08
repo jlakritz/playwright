@@ -5,7 +5,7 @@
   </div>
 
   <header class="play-header">
-    <div class="kicker">Playwright &middot; Theatre Maker</div>
+    <div class="kicker">{{ .Params.kicker | default "Playwright &middot; Theatre Makerć }}</div>
     <h1 class="play-title" style="font-size:clamp(2.4rem, 10vw, 5.5rem);">{{ .Title }}</h1>
     {{ with .Params.subtitle }}<p class="play-subtitle">{{ . }}</p>{{ end }}
   </header>
