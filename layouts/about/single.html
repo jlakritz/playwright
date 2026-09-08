@@ -1,11 +1,37 @@
 {{ define "main" }}
-<main class="section">
-  <div class="site-shell article-layout">
-    <article class="article">
-      <div class="kicker">About the Writer</div>
-      <h1 class="article-title">{{ .Title }}</h1>
-      <div class="article-content">{{ .Content }}</div>
-    </article>
+<div class="site-shell">
+  <div class="back-bar">
+    <a href="{{ "/" | relURL }}" class="btn-back">&larr; Back home</a>
   </div>
-</main>
+
+  <header class="play-header">
+    <div class="kicker">Playwright &middot; Theatre Maker</div>
+    <h1 class="play-title" style="font-size:clamp(2.4rem, 10vw, 5.5rem);">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="play-subtitle">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="play-grid">
+    <div class="play-main-content">
+      {{ .Content }}
+    </div>
+
+    <aside class="play-sidebar">
+      {{ with .Params.credits }}
+      <div class="spec-group">
+        <span class="spec-label">Selected Credits</span>
+        <div class="spec-value">
+          {{ range . }}
+          <p style="margin:0 0 0.7rem;">{{ . | markdownify }}</p>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      <div class="spec-group">
+        <span class="spec-label">Get in Touch</span>
+        <div class="spec-value"><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></div>
+      </div>
+      <a href="mailto:{{ site.Params.email }}?subject=Hello" class="cta-button">Email Jamie</a>
+    </aside>
+  </div>
+</div>
 {{ end }}
