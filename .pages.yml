@@ -39,6 +39,14 @@ content:
       - name: hero_photo_caption_right
         label: Hero Photo Caption (right)
         type: string
+      - name: plays_kicker
+        label: Play Kicker (small label above the name)
+        type: string
+      - name: plays_title                                               label: Hero Title (HTML allowed, e.g. use <br> for a l>
+        type: string
+      - name: plays_lede
+        label: Plays Lede Sentence
+        type: string
       - name: press_quote
         label: Press Quote / Interlude
         type: object
@@ -52,6 +60,15 @@ content:
           - name: attribution
             label: Attribution
             type: string
+      - name: contact_kicker
+        label: Contact Kicker (small label above the name)
+        type: string
+      - name: contact_title                                               label: Hero Title (HTML allowed, e.g. use <br> for a l>
+        type: string
+      - name: contact_lede
+        label: Contact Lede Sentence
+        type: string
+
 
   # ==============================================================
   # PLAYS — the core commercial content type
