@@ -280,3 +280,41 @@ content:
       - name: body
         label: Full Entry (optional, for future full notebook pages)
         type: rich-text
+
+  - name: about
+    label: About
+    type: file
+    path: content/about.md
+    fields:
+      - name: title
+        type: string
+      - name: subtitle
+        type: string
+      - name: layout
+        default : about
+        type: string
+      - name: kicker
+        type: string
+      - name: hero_photo
+        label: Hero Photo
+        type: image
+      - name: hero_photo_alt
+        label: Hero Photo Alt Text
+        type: string
+      - name: hero_photo_badge
+        label: Hero Photo Badge Text
+        type: string
+      - name: hero_photo_caption_left
+        label: Hero Photo Caption (left)
+        type: string
+      - name: hero_photo_caption_right
+        label: Hero Photo Caption (right)
+        type: string
+      - name: credits
+        label: Credits
+        type: string
+        list:
+          collapsible: true
+      - name: body
+        label: Content
+        type: rich-text
