@@ -23,5 +23,5 @@ contact_lede: "Questions about my work, performance licenses, readings, or a con
 press_quote:
   label: Critical Press &amp; Adjudication
   text: '"Jamie Lakritz leaves you <em>forever on the edge of your seat</em>."'
-  attribution: Wokingham Today
+  attribution: Wokingham Today · The Start of Something
 ---
