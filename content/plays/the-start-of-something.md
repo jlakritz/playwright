@@ -35,6 +35,9 @@ gallery:
   - image: uploads/SHP_Studio_StartofSomething-9324.jpg.webp
     caption: Jeanette Rourke as Evelyn, Studio Theatre Company, 2019. Photo by Alex
       Harvey-Brown, Savannah Photographic
+  - image: uploads/FB_IMG_1789246679000.jpg
+    caption: Denise Butcher, Lynn Price and Tammy Solman Sculley, Brightlight
+      Theatre, 2024
 production_history: |-
   Brightlight Theatre, Maidenhead Drama Festival, 2025<br/>
   Brightlight Theatre, Welwyn Drama Festival, 2024<br/>
