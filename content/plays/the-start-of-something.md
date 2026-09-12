@@ -10,11 +10,15 @@ now_playing: false
 licensing_status: licensed
 licensor: stagescripts
 licensing_note: Published and available to license now.
+licensing_links:
+  - url: https://www.stagescripts.com/products/the-start-of-something
+    link_text: View on Stagescripts (50 min version)
+  - url: https://www.stagescripts.com/products/the-start-of-something-75min-version?pr_prod_strat=pinned&pr_rec_id=379f72dee&pr_rec_pid=15104752386434&pr_ref_pid=15053335953794&pr_seq=uniform
+    link_text: View on Stagescripts (75 min version)
 cast_size: 3 Actors (3F)
 running_time: 50 / 75 Minutes (short and full versions)
 form_style: Monologue Drama
 accolades: Winner, Derek Jacobi Playwriting Award, 2017
-thumbnail: uploads/plays/start-of-something-thumb.jpg
 production_history: |-
   Brightlight Theatre, Maidenhead Drama Festival, 2025<br/>
   Brightlight Theatre, Welwyn Drama Festival, 2024<br/>
@@ -28,6 +32,12 @@ awards:
     venue: "2017"
   - title: Winner, Best New Play
     venue: Woking Drama Festival, 2016
+reviews:
+  - exceprt: Genuinely moving as well as intriguing.
+    source: Mike Kaiser, Guild of Drama Adjudicators, Woking Drama Festival 2016
+  - exceprt: Tightly written and extraordinarily real. Poignant… subtle… beautiful.
+      A hidden gem.
+    source: Fringe Review, 2018
 ---
 ## "There was blue, and dark, and men’s voices, and wet feet and I watched myself see him. Lying there.”
 
