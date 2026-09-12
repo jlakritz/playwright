@@ -192,6 +192,94 @@ footer { border-top: 1px solid var(--line); padding: 1.4rem 0 1.8rem; font-famil
 .play-gallery-item img { width: 100%; aspect-ratio: 16/10; object-fit: cover; filter: grayscale(15%); }
 .play-gallery-caption { font-family: "DM Mono", monospace; font-size: 0.6rem; color: var(--muted); text-transform: uppercase; margin-top: 0.4rem; }
 
+/* Reviews */
+.reviews-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.6rem 0;
+}
+
+.review-card {
+  display: block;
+  position: relative;
+  padding: 1.5rem 1.4rem 1.3rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+a.review-card {
+  cursor: pointer;
+}
+
+a.review-card:hover {
+  color: var(--ink);
+  border-color: rgba(143, 31, 43, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.review-quote-mark {
+  color: var(--red);
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 0.7;
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-excerpt {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.review-source {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.3rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.review-link {
+  color: var(--red);
+  white-space: nowrap;
+}
+
+@media (min-width: 700px) {
+  .reviews-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .review-card {
+    padding: 1.7rem 1.6rem 1.4rem;
+  }
+
+  .review-excerpt {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .reviews-list {
+    gap: 1.4rem;
+  }
+}
+
+
 .play-sidebar { background: var(--paper-deep); border: 1px solid var(--line); padding: 1.6rem; }
 .spec-group { margin-bottom: 1.2rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }
 .spec-group:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }

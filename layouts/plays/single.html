@@ -64,6 +64,40 @@
       <p style="font-size:1rem; color:var(--muted);">{{ . | markdownify }}</p>
       {{ end }}
 
+     {{ with .Params.reviews }}
+      <h2>Reviews</h2>
+      <div class="reviews-list">
+        {{ range . }}
+          {{ if .review_url }}
+          <a href="{{ .review_url }}" target="_blank" rel="noopener" class="review-card">
+          {{ else }}
+          <div class="review-card">
+          {{ end }}
+
+            <div class="review-quote-mark">&ldquo;</div>
+
+            <blockquote class="review-excerpt">
+              {{ .excerpt }}
+            </blockquote>
+
+            <div class="review-source">
+              <span>{{ .source }}</span>
+              {{ if .review_url }}
+              <span class="review-link">Read full review&nbsp; &rarr;</span>
+              {{ end }}
+            </div>
+
+          {{ if .review_url }}
+          </a>
+          {{ else }}
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+
+
       {{ with .Params.awards }}
       <h2>Awards &amp; Festivals</h2>
       {{ range . }}
