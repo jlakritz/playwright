@@ -157,10 +157,19 @@ content:
         type: string
         description: "Short sentence shown in the licensing callout box on the play page."
 
-      - name: licensing_url
-        label: Licensing URL
-        type: string
-        description: "URL for licensing the play. "
+      - name: licensing_links
+        label: Licensing URLs
+        type: object
+        description: "URLs for licensing the play. For plays with multiple versions add multiple links."
+        list: true
+        fields:
+          - name: url
+            label: "URL"
+            type: string
+          - name: link_text
+            label: "Link Text"
+            type: string
+            description: "Text in the button."
 
       - name: cast_size
         label: Cast Size
