@@ -93,10 +93,10 @@
       {{ end }}
 
       {{ if eq .Params.licensing_status "licensed" }}
-        {{ if eq .Params.licensor "lazybee" }}
-        <a href="{{ site.Params.lazyBeeUrl }}" target="_blank" rel="noopener" class="cta-button">View on Lazy Bee Scripts</a>
-        {{ else if eq .Params.licensor "stagescripts" }}
-        <a href="{{ site.Params.stagescriptsUrl }}" target="_blank" rel="noopener" class="cta-button">View on Stagescripts</a>
+        {{ with .Params.licensing_links }} 
+          {{ range . }}
+           <a href="{{ .Params.url }}" target="_blank" rel="noopener" class="cta-button">{{ .Params.link_text }}</a>
+          {{ end }}
         {{ end }}
       {{ else if eq .Params.licensing_status "development" }}
         <a href="mailto:{{ site.Params.email }}?subject=Interest: {{ .Title }}" class="cta-button">Register Interest</a>
