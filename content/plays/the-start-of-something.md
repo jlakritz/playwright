@@ -26,6 +26,7 @@ production_history: |-
   The Drama Wheel, Theatre503, 2018<br/>
   The Drama Wheel, Brighton Fringe, 2018<br/>
   The Drama Wheel, All Saints Centre, Lewes, 2017<br/>
+  Brightlight Theatre, Guildford Fringe Festival, 2017<br/>
   Brightlight Theatre, Woking Drama Festival, 2016
 awards:
   - title: Winner Derek Jacobi Playwriting Award
