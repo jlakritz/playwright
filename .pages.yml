@@ -266,6 +266,10 @@ content:
           - name: source
             label: "Source"
             type: string
+          - name: review_url
+            label: "Review Link"
+            type: string
+            description: "Link to the full review."
 
       - name: body
         label: Synopsis (main content)
