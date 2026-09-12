@@ -53,8 +53,9 @@ awards:
   - title: Winner, Best New Play
     venue: Woking Drama Festival, 2016
 reviews:
-  - excerpt: Genuinely moving as well as intriguing.
-    source: Mike Kaiser, Guild of Drama Adjudicators, Woking Drama Festival 2016
+  - excerpt: Leaves you forever on the edge of your seat. ★★★★★
+    source: Wokingham today, 2019
+    review_url: https://wokingham.today/review-jamie-lakritzs-the-start-of-something-studio-theatre-company-south-hill-park/
   - excerpt: Tightly written and extraordinarily real. Poignant… subtle… beautiful.
       A hidden gem.
     source: Fringe Review, 2018
@@ -62,9 +63,8 @@ reviews:
   - excerpt: A heart-wrenching, funny production.
     source: Broadway Baby, 2018
     review_url: https://broadwaybaby.com/shows/the-start-of-something/729568
-  - excerpt: Leaves you forever on the edge of your seat. ★★★★★
-    source: Wokingham today, 2019
-    review_url: https://wokingham.today/review-jamie-lakritzs-the-start-of-something-studio-theatre-company-south-hill-park/
+  - excerpt: Genuinely moving as well as intriguing.
+    source: Mike Kaiser, Guild of Drama Adjudicators, Woking Drama Festival 2016
 ---
 ## "There was blue, and dark, and men’s voices, and wet feet and I watched myself see him. Lying there.”
 
