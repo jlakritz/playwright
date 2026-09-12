@@ -260,7 +260,7 @@ content:
         type: object
         list: true
         fields:
-          - name: exceprt
+          - name: excerpt
             label: "Review excerpt"
             type: string
           - name: source
