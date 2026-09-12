@@ -21,13 +21,19 @@ form_style: Monologue Drama
 accolades: Winner, Derek Jacobi Playwriting Award, 2017
 gallery:
   - image: uploads/FB_IMG_1789245910329.jpg
-    caption: Kate Isitt as Amy, The Drama Wheel, 2017. 📷 Katie Vandyck
+    caption: Kate Isitt as Amy, The Drama Wheel, 2017. Photo by Katie Vandyck
   - image: uploads/FB_IMG_1789245916931.jpg
-    caption: "Kathleen Cranham as Emma, The Drama Wheel, 2017. 📷 Katie Vandyck "
+    caption: "Kathleen Cranham as Emma, The Drama Wheel, 2017. Photo by Katie Vandyck "
   - image: uploads/FB_IMG_1788815648642.jpg
-    caption: Sharon Lewes-Lloyd as Evelyn, The Drama Wheel, 2017. 📷 Katie Vandyck
+    caption: Sharon Lewes-Lloyd as Evelyn, The Drama Wheel, 2017. Photo by Katie Vandyck
   - image: uploads/SHP_Studio_StartofSomething-9207.jpg.webp
-    caption: Hannah Collman as Amy, Studio Theatre Company, 2019. 📷 Alex
+    caption: Hannah Collman as Amy, Studio Theatre Company, 2019. Photo by Alex
+      Harvey-Brown, Savannah Photographic
+  - image: uploads/SHP_Studio_StartofSomething-9278.jpg.webp
+    caption: Laura Hannawin as Emma, Studio Theatre Company, 2019. Photo by Alex
+      Harvey-Brown, Savannah Photographic
+  - image: uploads/SHP_Studio_StartofSomething-9324.jpg.webp
+    caption: Jeanette Rourke as Evelyn, Studio Theatre Company, 2019. Photo by Alex
       Harvey-Brown, Savannah Photographic
 production_history: |-
   Brightlight Theatre, Maidenhead Drama Festival, 2025<br/>
