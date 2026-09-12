@@ -53,13 +53,13 @@ awards:
   - title: Winner, Best New Play
     venue: Woking Drama Festival, 2016
 reviews:
-  - exceprt: Genuinely moving as well as intriguing.
+  - excerpt: Genuinely moving as well as intriguing.
     source: Mike Kaiser, Guild of Drama Adjudicators, Woking Drama Festival 2016
-  - exceprt: Tightly written and extraordinarily real. Poignant… subtle… beautiful.
+  - excerpt: Tightly written and extraordinarily real. Poignant… subtle… beautiful.
       A hidden gem.
     source: Fringe Review, 2018
     review_url: http://fringereview.co.uk/review/brighton-fringe/2018/the-start-of-something/
-  - exceprt: A heart-wrenching, funny production.
+  - excerpt: A heart-wrenching, funny production.
     source: Broadway Baby, 2018
     review_url: https://broadwaybaby.com/shows/the-start-of-something/729568
   - exceprt: Leaves you forever on the edge of your seat. ★★★★★
