@@ -95,7 +95,7 @@
       {{ if eq .Params.licensing_status "licensed" }}
         {{ with .Params.licensing_links }} 
           {{ range . }}
-           <a href="{{ .Params.url }}" target="_blank" rel="noopener" class="cta-button">{{ .Params.link_text }}</a>
+           <a href="{{ .url }}" target="_blank" rel="noopener" class="cta-button">{{ .link_text }}</a>
           {{ end }}
         {{ end }}
       {{ else if eq .Params.licensing_status "development" }}
