@@ -62,7 +62,7 @@ reviews:
   - excerpt: A heart-wrenching, funny production.
     source: Broadway Baby, 2018
     review_url: https://broadwaybaby.com/shows/the-start-of-something/729568
-  - exceprt: Leaves you forever on the edge of your seat. ★★★★★
+  - excerpt: Leaves you forever on the edge of your seat. ★★★★★
     source: Wokingham today, 2019
     review_url: https://wokingham.today/review-jamie-lakritzs-the-start-of-something-studio-theatre-company-south-hill-park/
 ---
