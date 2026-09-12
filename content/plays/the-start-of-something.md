@@ -48,8 +48,8 @@ production_history: |-
   Brightlight Theatre, Guildford Fringe Festival, 2017<br/>
   Brightlight Theatre, Woking Drama Festival, 2016
 awards:
-  - title: Winner Derek Jacobi Playwriting Award
-    venue: "2017"
+  - title: Winner, Derek Jacobi Playwriting Award
+    venue: NDFA, 2017
   - title: Winner, Best New Play
     venue: Woking Drama Festival, 2016
 reviews:
