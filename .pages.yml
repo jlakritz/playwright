@@ -157,6 +157,11 @@ content:
         type: string
         description: "Short sentence shown in the licensing callout box on the play page."
 
+      - name: licensing_url
+        label: Licensing URL
+        type: string
+        description: "URL for licensing the play. "
+
       - name: cast_size
         label: Cast Size
         type: string
@@ -239,6 +244,18 @@ content:
             type: string
           - name: venue
             label: "Festival / Venue"
+            type: string
+
+      - name: reviews
+        label: Reviews
+        type: object
+        list: true
+        fields:
+          - name: exceprt
+            label: "Review excerpt"
+            type: string
+          - name: source
+            label: "Source"
             type: string
 
       - name: body
