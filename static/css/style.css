@@ -1,9 +1,3 @@
-/* ================================================================
-   JAMIE LAKRITZ — PLAYWRIGHT SITE
-   Base styles from the agreed final design.
-   Mobile-first nav fallback added (the original had no small-screen
-   nav pattern — this adds one without changing anything else).
-   ================================================================ */
 :root {
   --paper: #f3efe7;
   --paper-deep: #e9e2d5;
@@ -162,151 +156,878 @@ footer { border-top: 1px solid var(--line); padding: 1.4rem 0 1.8rem; font-famil
 .footer-inner { display: flex; flex-direction: column; gap: 0.4rem; }
 @media (min-width: 700px) { .footer-inner { flex-direction: row; justify-content: space-between; } }
 
+
 /* ================================================================
-   PLAY MONOGRAPH PAGE (individual play detail page)
-   ================================================================ */
-.back-bar { padding: 1.6rem 0 1.2rem; }
-.btn-back { font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.11em; font-weight: 600; color: var(--muted); display: inline-flex; align-items: center; gap: 0.4rem; }
-.btn-back:hover { color: var(--red); }
+PLAY MONOGRAPH PAGE
+================================================================ */
 
-.now-playing-flag { font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--live); background: var(--live-soft); padding: 0.32rem 0.75rem; display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; letter-spacing: 0.04em; }
-.now-playing-flag__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--live); animation: livePulse 2s ease-in-out infinite; }
+.back-bar {
+  padding: 1.6rem 0 1.2rem;
+}
 
-.play-header { border-bottom: 1px solid var(--line); padding-bottom: 2rem; margin-bottom: 2.2rem; }
-.play-title { font-size: clamp(2.4rem, 12vw, 8rem); line-height: 0.9; letter-spacing: -0.02em; margin: 0.7rem 0 1rem; }
-.play-subtitle { font-size: clamp(1.05rem, 4.5vw, 1.8rem); font-style: italic; color: #4f4a43; max-width: 36ch; margin: 0; }
+.btn-back {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-weight: 600;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 
-.play-grid { display: grid; grid-template-columns: 1fr; gap: 2.4rem; }
-.play-main-content h2 { font-size: 1.5rem; margin: 2rem 0 0.9rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; }
-.play-main-content h2:first-of-type { margin-top: 0; }
-.play-main-content p { font-size: 0.98rem; line-height: 1.68; }
+.btn-back:hover {
+  color: var(--red);
+}
 
-.script-box { background: var(--paper-deep); border: 1px solid var(--line); padding: 1.6rem 1.2rem; margin: 1.6rem 0; font-family: "DM Mono", monospace; font-size: 0.85rem; line-height: 1.65; position: relative; }
-.script-box-tag { font-family: "Libre Franklin", sans-serif; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--red); margin-bottom: 1.3rem; font-weight: 700; text-align: center; border-bottom: 1px dashed var(--line); padding-bottom: 0.5rem; }
-.script-speaker { text-align: center; font-weight: 700; margin-top: 1.15em; text-transform: uppercase; }
-.script-dir { text-align: center; font-style: italic; color: var(--muted); max-width: 38ch; margin: 0.4em auto; font-family: "Crimson Pro", Georgia, serif; font-size: 0.98rem; }
-.script-line { max-width: 42ch; margin: 0 auto; }
 
-.play-gallery { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.6rem 0; }
-.play-gallery-item { border: 1px solid var(--line); padding: 0.4rem; background: var(--paper-deep); }
-.play-gallery-item img { width: 100%; aspect-ratio: 16/10; object-fit: cover; filter: grayscale(15%); }
-.play-gallery-caption { font-family: "DM Mono", monospace; font-size: 0.6rem; color: var(--muted); text-transform: uppercase; margin-top: 0.4rem; }
+/* ---------------------------------------------------------------
+PLAY HEADER
+--------------------------------------------------------------- */
 
-/* Reviews */
-.reviews-list {
+.play-header {
+  border-bottom: 1px solid var(--line);
+  padding: 1.2rem 0 2.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.now-playing-flag {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--live);
+  background: var(--live-soft);
+  padding: 0.32rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.now-playing-flag__dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background: var(--live);
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+.play-header .kicker {
+  margin-bottom: 0.7rem;
+}
+
+.play-title {
+  font-size: clamp(3rem, 14vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.1rem;
+  max-width: 11ch;
+}
+
+.play-subtitle {
+  font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+  font-style: italic;
+  color: #4f4a43;
+  max-width: 36ch;
+  margin: 0;
+  line-height: 1.35;
+}
+
+
+/* ---------------------------------------------------------------
+MAIN GRID
+--------------------------------------------------------------- */
+
+.play-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 1.6rem 0;
+  gap: 2.4rem;
 }
 
-.review-card {
-  display: block;
-  position: relative;
-  padding: 1.5rem 1.4rem 1.3rem;
-  background: var(--paper-deep);
-  border: 1px solid var(--line);
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+.play-main-content {
+  min-width: 0;
 }
 
-a.review-card {
-  cursor: pointer;
+.play-section {
+  margin-bottom: 3.5rem;
 }
 
-a.review-card:hover {
-  color: var(--ink);
-  border-color: rgba(143, 31, 43, 0.45);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+.play-section > h2,
+.section-heading-row h2 {
+  font-size: 1.7rem;
+  line-height: 1;
+  margin: 0.25rem 0 1rem;
 }
 
-.review-quote-mark {
+.section-kicker {
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
   color: var(--red);
-  font-family: Georgia, serif;
-  font-size: 3.5rem;
-  line-height: 0.7;
-  height: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.play-main-content p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.play-main-content h2 + p {
+  margin-top: 0;
+}
+
+
+/* ---------------------------------------------------------------
+LICENSING STATUS
+--------------------------------------------------------------- */
+
+.licensing-callout {
+  border: 1px solid var(--line);
+  /*padding: 1rem 1.1rem;*/
+  /*margin-bottom: 2.8rem;*/
+  background: var(--paper-deep);
+      width: fit-content;
+    border-radius: 30px;
+    margin-top: 0.5rem;
+    padding:7px;
+}
+
+.licensing-callout--licensed {
+  border-color: #b8cdb0;
+  background: var(--live-soft);
+}
+
+.licensing-callout--development {
+  background: #f5e4e2;
+  border-color: #d9b3af;
+}
+
+.licensing-callout--direct {
+  background: #f5e4e2;
+  border-color: #d9b3af;
+}
+
+.licensing-callout__status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.licensing-callout__indicator {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: var(--red);
+  margin-top: 0.35rem;
+}
+
+.licensing-callout--licensed .licensing-callout__indicator {
+  background: var(--live);
+}
+
+.licensing-callout__title {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.82rem !important;
+  line-height: 1.3 !important;
+  font-weight: 700;
+  margin: 0 0 0.2rem !important;
+}
+
+.licensing-callout__sub {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  color: var(--muted);
+  font-size: 0.78rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+
+/* ---------------------------------------------------------------
+FROM THE WRITER
+--------------------------------------------------------------- */
+
+.from-the-desk {
+  margin-top: 3rem;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.from-the-desk h2 {
+  margin-bottom: 0.8rem;
+}
+
+.from-the-desk p {
+  font-size: 1.15rem !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+  color: #4f4a43;
+  max-width: 55ch;
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------------------
+SECTION HEADING WITH COUNT
+--------------------------------------------------------------- */
+
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.review-excerpt {
+.section-heading-row h2 {
+  margin-bottom: 0;
+}
+
+.section-count {
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------------
+PRODUCTION GALLERY
+--------------------------------------------------------------- */
+
+.play-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.play-gallery-item {
+  border: 1px solid var(--line);
+  padding: 0.4rem;
+  background: var(--paper-deep);
   margin: 0;
-  font-size: 1.18rem;
-  line-height: 1.45;
-  font-style: italic;
-  color: var(--ink);
+}
+
+.play-gallery-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: grayscale(12%);
+  transition: filter 0.25s ease;
+}
+
+.play-gallery-item:hover img {
+  filter: grayscale(0%);
+}
+
+.play-gallery-item figcaption {
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+  line-height: 1.4;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
+  padding: 0 0.15rem 0.15rem;
+}
+
+
+/* ---------------------------------------------------------------
+REVIEWS
+--------------------------------------------------------------- */
+
+.play-reviews {
+  padding-top: 0.5rem;
+}
+
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.review-card {
+	grid-column: span 2;
+  min-width: 0;
+  overflow-wrap: break-word;
+  background: var(--paper);
+  padding: 1.5rem 1.4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+
+.review-card blockquote {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.review-footer {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+
+
+
+.reviews-grid--remainder-1 .review-card:last-child {
+  grid-column: span 6;
+}
+
+.reviews-grid--remainder-2 .review-card:nth-last-child(2),
+.reviews-grid--remainder-2 .review-card:last-child {
+  grid-column: span 3;
+}
+
+.review-mark {
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 0.55;
+  color: var(--red);
+  height: 1.2rem;
+  opacity: 0.9;
+}
+
+.review-card blockquote {
+  font-size: 1.45rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 1.1rem 0 1.6rem;
+  max-width: 45ch;
+}
+
+.review-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .review-source {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.3rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid var(--line);
   font-family: "DM Mono", monospace;
-  font-size: 0.62rem;
-  line-height: 1.4;
+  font-size: 0.61rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
 }
 
 .review-link {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.61rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
   color: var(--red);
   white-space: nowrap;
 }
 
+.review-link:hover {
+  color: var(--ink);
+}
+
+
+/* ---------------------------------------------------------------
+SCRIPT EXCERPT
+--------------------------------------------------------------- */
+
+.script-box {
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  padding: 1.6rem 1.2rem;
+  margin: 1.5rem 0;
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  position: relative;
+}
+
+.script-box-tag {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--red);
+  margin-bottom: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 0.5rem;
+}
+
+.script-speaker {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 1.15em;
+  text-transform: uppercase;
+}
+
+.script-dir {
+  text-align: center;
+  font-style: italic;
+  color: var(--muted);
+  max-width: 38ch;
+  margin: 0.4em auto;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.98rem;
+}
+
+.script-line {
+  max-width: 42ch;
+  margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------------
+PRODUCTION HISTORY
+--------------------------------------------------------------- */
+
+.history-copy {
+  color: #4f4a43;
+  max-width: 65ch;
+}
+
+.history-copy p {
+  margin: 0 0 0.8rem;
+}
+
+
+/* ---------------------------------------------------------------
+AWARDS
+--------------------------------------------------------------- */
+
+.awards-list {
+  /*border-top: 1px solid var(--line);*/
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.award-item strong {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.award-item span {
+  font-family: "DM Mono", monospace;
+  font-size: 0.59rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+
+/* ---------------------------------------------------------------
+SIDEBAR
+--------------------------------------------------------------- */
+
+.play-sidebar {
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  padding: 1.4rem;
+  height: fit-content;
+}
+
+.sidebar-specs {
+  /*margin-bottom: 1.3rem;*/
+}
+
+.spec-group {
+  padding: 0 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-group:last-child {
+  margin-bottom: 0;
+}
+
+.spec-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.61rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--red);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.spec-value {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------------
+SIDEBAR AWARD
+--------------------------------------------------------------- */
+
+.sidebar-accolade {
+  /*border-top: 1px solid var(--line);*/
+  border-bottom: 1px solid var(--line);
+  padding: 1.2rem 0;
+  margin-bottom: 1.3rem;
+}
+
+.accolade-text {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+
+/* ---------------------------------------------------------------
+SIDEBAR LICENSING
+--------------------------------------------------------------- */
+
+.sidebar-licensing {
+  padding-top: 0.1rem;
+}
+
+.licensing-provider {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #4f4a43;
+}
+
+
+/* ---------------------------------------------------------------
+CTA
+--------------------------------------------------------------- */
+
+.cta-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--ink);
+  color: #fff;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-weight: 600;
+  padding: 0.95rem 0.7rem;
+  margin-top: 1.2rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------------
+RESPONSIVE MOBILE/DESKTOP
+--------------------------------------------------------------- */
+
+@media (max-width: 699px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border: none;
+    background: transparent;
+  }
+
+  .review-card,
+  .reviews-grid--remainder-1 .review-card:last-child,
+  .reviews-grid--remainder-2 .review-card:nth-last-child(2),
+  .reviews-grid--remainder-2 .review-card:last-child {
+    grid-column: 1;
+    min-height: 0;
+    border: 1px solid var(--line);
+    background: var(--paper-deep);
+    padding: 1.4rem 1.3rem 1.25rem;
+  }
+}
+
+
 @media (min-width: 700px) {
-  .reviews-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+
+  .reviews-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .review-card {
-    padding: 1.7rem 1.6rem 1.4rem;
+    padding: 1.6rem 1.5rem 1.4rem;
   }
 
-  .review-excerpt {
-    font-size: 1.25rem;
+  .play-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem;
   }
+
 }
+
 
 @media (min-width: 900px) {
-  .reviews-list {
-    gap: 1.4rem;
+
+  .back-bar {
+    padding: 1.8rem 0 1.4rem;
   }
+
+  .play-header {
+    padding: 1.4rem 0 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .play-title {
+    font-size: clamp(4rem, 9vw, 8rem);
+    max-width: 12ch;
+  }
+
+  .play-grid {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .play-main-content {
+    max-width: 760px;
+  }
+
+  .play-section {
+    margin-bottom: 5rem;
+  }
+
+  .play-section > h2:first-of-type,
+  .section-heading-row h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+  }
+
+  .play-main-content p {
+    font-size: 1rem;
+  }
+
+  .licensing-callout {
+    /*margin-bottom: 3.5rem;*/
+    /*padding: 1rem 1.2rem;*/
+  }
+
+  .from-the-desk {
+    padding: 2.3rem 0;
+  }
+
+  .from-the-desk p {
+    font-size: 1.3rem !important;
+  }
+
+  .play-gallery {
+    gap: 1.5rem;
+  }
+
+  .play-sidebar {
+    padding: 2rem;
+    position: sticky;
+    top: 7rem;
+  }
+
+  .spec-value {
+    font-size: 0.95rem;
+  }
+
+  .script-box {
+    padding: 2.5rem 2rem;
+  }
+
+  .award-item {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: baseline;
+  }
+
 }
 
-
-.play-sidebar { background: var(--paper-deep); border: 1px solid var(--line); padding: 1.6rem; }
-.spec-group { margin-bottom: 1.2rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }
-.spec-group:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.spec-label { font-family: "DM Mono", monospace; font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--red); display: block; margin-bottom: 0.3rem; }
-.spec-value { font-family: "Libre Franklin", sans-serif; font-size: 0.92rem; font-weight: 500; }
-
-.licensing-callout { padding: 1rem; margin-bottom: 1.2rem; border: 1px solid; font-family: "Libre Franklin", Arial, sans-serif; }
-.licensing-callout--direct { background: #f5e4e2; border-color: #d9b3af; }
-.licensing-callout--licensed { background: var(--live-soft); border-color: #b8cdb0; }
-.licensing-callout__title { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }
-.licensing-callout__sub { font-size: 0.8rem; color: var(--muted); }
-
-.cta-button { display: block; width: 100%; text-align: center; background: var(--ink); color: #fff; font-family: "Libre Franklin", sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.11em; font-weight: 600; padding: 0.95rem; margin-top: 1.4rem; transition: background 0.2s ease; }
-.cta-button:hover { background: var(--red); color: #fff; }
-
-@media (min-width: 900px) {
-  .play-header { padding-bottom: 3.5rem; margin-bottom: 4rem; }
-  .play-grid { grid-template-columns: 1fr 340px; gap: 5rem; align-items: start; }
-  .play-main-content h2 { font-size: 2.2rem; margin: 2.5rem 0 1rem; }
-  .play-main-content p { font-size: 1rem; }
-  .script-box { padding: 2.5rem 2rem; }
-  .play-gallery { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .play-sidebar { padding: 2rem; position: sticky; top: 7rem; }
-  .spec-value { font-size: 0.95rem; }
-}
 
 @media (prefers-reduced-motion: reduce) {
-  .now-playing__dot, .now-playing-flag__dot { animation: none; }
-  .mobile-menu { transition: none; }
+
+  .now-playing__dot,
+  .now-playing-flag__dot {
+    animation: none;
+  }
+
+  .cta-button,
+  .play-gallery-item img {
+    transition: none;
+  }
+
 }
+
+
+
+/* ================================================================
+   PLAY MONOGRAPH PAGE (individual play detail page)
+   ================================================================ */
+/*.back-bar { padding: 1.6rem 0 1.2rem; }*/
+/*.btn-back { font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.11em; font-weight: 600; color: var(--muted); display: inline-flex; align-items: center; gap: 0.4rem; }*/
+/*.btn-back:hover { color: var(--red); }*/
+
+/*.now-playing-flag { font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--live); background: var(--live-soft); padding: 0.32rem 0.75rem; display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; letter-spacing: 0.04em; }*/
+/*.now-playing-flag__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--live); animation: livePulse 2s ease-in-out infinite; }*/
+
+/*.play-header { border-bottom: 1px solid var(--line); padding-bottom: 2rem; margin-bottom: 2.2rem; }*/
+/*.play-title { font-size: clamp(2.4rem, 12vw, 8rem); line-height: 0.9; letter-spacing: -0.02em; margin: 0.7rem 0 1rem; }*/
+/*.play-subtitle { font-size: clamp(1.05rem, 4.5vw, 1.8rem); font-style: italic; color: #4f4a43; max-width: 36ch; margin: 0; }*/
+
+/*.play-grid { display: grid; grid-template-columns: 1fr; gap: 2.4rem; }*/
+/*.play-main-content h2 { font-size: 1.5rem; margin: 2rem 0 0.9rem; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; }*/
+/*.play-main-content h2:first-of-type { margin-top: 0; }*/
+/*.play-main-content p { font-size: 0.98rem; line-height: 1.68; }*/
+
+/*.script-box { background: var(--paper-deep); border: 1px solid var(--line); padding: 1.6rem 1.2rem; margin: 1.6rem 0; font-family: "DM Mono", monospace; font-size: 0.85rem; line-height: 1.65; position: relative; }*/
+/*.script-box-tag { font-family: "Libre Franklin", sans-serif; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--red); margin-bottom: 1.3rem; font-weight: 700; text-align: center; border-bottom: 1px dashed var(--line); padding-bottom: 0.5rem; }*/
+/*.script-speaker { text-align: center; font-weight: 700; margin-top: 1.15em; text-transform: uppercase; }*/
+/*.script-dir { text-align: center; font-style: italic; color: var(--muted); max-width: 38ch; margin: 0.4em auto; font-family: "Crimson Pro", Georgia, serif; font-size: 0.98rem; }*/
+/*.script-line { max-width: 42ch; margin: 0 auto; }*/
+
+/*.play-gallery { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.6rem 0; }*/
+/*.play-gallery-item { border: 1px solid var(--line); padding: 0.4rem; background: var(--paper-deep); }*/
+/*.play-gallery-item img { width: 100%; aspect-ratio: 16/10; object-fit: cover; filter: grayscale(15%); }*/
+/*.play-gallery-caption { font-family: "DM Mono", monospace; font-size: 0.6rem; color: var(--muted); text-transform: uppercase; margin-top: 0.4rem; }*/
+
+/* Reviews */
+/*.reviews-list {*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr;*/
+/*  gap: 1rem;*/
+/*  margin: 1.6rem 0;*/
+/*}*/
+
+/*.review-card {*/
+/*  display: block;*/
+/*  position: relative;*/
+/*  padding: 1.5rem 1.4rem 1.3rem;*/
+/*  background: var(--paper-deep);*/
+/*  border: 1px solid var(--line);*/
+/*  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;*/
+/*}*/
+
+/*a.review-card {*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*a.review-card:hover {*/
+/*  color: var(--ink);*/
+/*  border-color: rgba(143, 31, 43, 0.45);*/
+/*  transform: translateY(-2px);*/
+/*  box-shadow: 0 8px 20px rgba(0,0,0,0.05);*/
+/*}*/
+
+/*.review-quote-mark {*/
+/*  color: var(--red);*/
+/*  font-family: Georgia, serif;*/
+/*  font-size: 3.5rem;*/
+/*  line-height: 0.7;*/
+/*  height: 1rem;*/
+/*  margin-bottom: 1rem;*/
+/*}*/
+
+/*.review-excerpt {*/
+/*  margin: 0;*/
+/*  font-size: 1.18rem;*/
+/*  line-height: 1.45;*/
+/*  font-style: italic;*/
+/*  color: var(--ink);*/
+/*}*/
+
+/*.review-source {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  gap: 1rem;*/
+/*  margin-top: 1.3rem;*/
+/*  padding-top: 0.8rem;*/
+/*  border-top: 1px solid var(--line);*/
+/*  font-family: "DM Mono", monospace;*/
+/*  font-size: 0.62rem;*/
+/*  line-height: 1.4;*/
+/*  text-transform: uppercase;*/
+/*  letter-spacing: 0.08em;*/
+/*  color: var(--muted);*/
+/*}*/
+
+/*.review-link {*/
+/*  color: var(--red);*/
+/*  white-space: nowrap;*/
+/*}*/
+
+/*@media (min-width: 700px) {*/
+/*  .reviews-list {*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    gap: 1.2rem;*/
+/*  }*/
+
+/*  .review-card {*/
+/*    padding: 1.7rem 1.6rem 1.4rem;*/
+/*  }*/
+
+/*  .review-excerpt {*/
+/*    font-size: 1.25rem;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 900px) {*/
+/*  .reviews-list {*/
+/*    gap: 1.4rem;*/
+/*  }*/
+/*}*/
+
+
+/*.play-sidebar { background: var(--paper-deep); border: 1px solid var(--line); padding: 1.6rem; }*/
+/*.spec-group { margin-bottom: 1.2rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }*/
+/*.spec-group:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }*/
+/*.spec-label { font-family: "DM Mono", monospace; font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--red); display: block; margin-bottom: 0.3rem; }*/
+/*.spec-value { font-family: "Libre Franklin", sans-serif; font-size: 0.92rem; font-weight: 500; }*/
+
+/*.licensing-callout { padding: 1rem; margin-bottom: 1.2rem; border: 1px solid; font-family: "Libre Franklin", Arial, sans-serif; }*/
+/*.licensing-callout--direct { background: #f5e4e2; border-color: #d9b3af; }*/
+/*.licensing-callout--licensed { background: var(--live-soft); border-color: #b8cdb0; }*/
+/*.licensing-callout__title { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem; }*/
+/*.licensing-callout__sub { font-size: 0.8rem; color: var(--muted); }*/
+
+/*.cta-button { display: block; width: 100%; text-align: center; background: var(--ink); color: #fff; font-family: "Libre Franklin", sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.11em; font-weight: 600; padding: 0.95rem; margin-top: 1.4rem; transition: background 0.2s ease; }*/
+/*.cta-button:hover { background: var(--red); color: #fff; }*/
+
+/*@media (min-width: 900px) {*/
+/*  .play-header { padding-bottom: 3.5rem; margin-bottom: 4rem; }*/
+/*  .play-grid { grid-template-columns: 1fr 340px; gap: 5rem; align-items: start; }*/
+/*  .play-main-content h2 { font-size: 2.2rem; margin: 2.5rem 0 1rem; }*/
+/*  .play-main-content p { font-size: 1rem; }*/
+/*  .script-box { padding: 2.5rem 2rem; }*/
+/*  .play-gallery { grid-template-columns: 1fr 1fr; gap: 1.5rem; }*/
+/*  .play-sidebar { padding: 2rem; position: sticky; top: 7rem; }*/
+/*  .spec-value { font-size: 0.95rem; }*/
+/*}*/
+
+/*@media (prefers-reduced-motion: reduce) {*/
+/*  .now-playing__dot, .now-playing-flag__dot { animation: none; }*/
+/*  .mobile-menu { transition: none; }*/
+/*}*/
