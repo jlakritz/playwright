@@ -20,7 +20,7 @@ accolades: "National Drama Festival 2026 Selection"
 
 from_the_desk: "I started writing this after we came back from Nationals in 2025, buzzing off everything we'd seen. Wanted something that wasn't realism — theatricality instead. Language that could sing."
 
-thumbnail: "uploads/plays/aviary-thumb.jpg"
+thumbnail:
 
 gallery:
   - image: "uploads/plays/aviary-01.jpg"

@@ -98,28 +98,63 @@
       </section>
       {{ end }}
 
-      {{ with .Params.gallery }}
-      <section class="play-section">
+      <!--{{ with .Params.gallery }}-->
+      <!--<section class="play-section">-->
             <!--<div class="section-kicker">On stage</div>-->
-            <h2>Production Photography</h2>
+      <!--      <h2>Production Photography</h2>-->
           <!--<span class="section-count">{{ len . }} photographs</span>-->
 
-        <div class="play-gallery">
-          {{ range . }}
-          <figure class="play-gallery-item">
-            <img
-              src="{{ .image | absURL }}"
-              alt="{{ .caption | default "Production photograph" }}"
-              loading="lazy"
-            >
-            {{ with .caption }}
-            <figcaption>{{ . }}</figcaption>
-            {{ end }}
-          </figure>
-          {{ end }}
-        </div>
-      </section>
+      <!--  <div class="play-gallery">-->
+      <!--    {{ range . }}-->
+      <!--    <figure class="play-gallery-item">-->
+      <!--      <img-->
+      <!--        src="{{ .image | absURL }}"-->
+      <!--        alt="{{ .caption | default "Production photograph" }}"-->
+      <!--        loading="lazy"-->
+      <!--      >-->
+      <!--      {{ with .caption }}-->
+      <!--      <figcaption>{{ . }}</figcaption>-->
+      <!--      {{ end }}-->
+      <!--    </figure>-->
+      <!--    {{ end }}-->
+      <!--  </div>-->
+      <!--</section>-->
+      <!--{{ end }}-->
+
+
+{{ with .Params.gallery }}
+<section class="play-section">
+  <!--<div class="section-kicker">On stage</div>-->
+      <h2>Production Photography</h2>
+  <div class="play-gallery" data-lightbox-gallery>
+    {{ range $index, $photo := . }}
+    <figure class="play-gallery-item">
+      <button
+        class="play-gallery-trigger"
+        type="button"
+        data-lightbox-index="{{ $index }}"
+        data-lightbox-src="{{ $photo.image | absURL }}"
+        data-lightbox-alt="{{ $photo.caption | default "Production photograph" }}"
+        {{ with $photo.caption }}data-lightbox-caption="{{ . }}"{{ end }}
+        aria-label="Enlarge photograph{{ with $photo.caption }}: {{ . }}{{ end }}"
+      >
+        <img
+          src="{{ $photo.image | absURL }}"
+          alt="{{ $photo.caption | default "Production photograph" }}"
+          loading="lazy"
+        >
+      </button>
+
+      {{ with $photo.caption }}
+      <figcaption class="play-gallery-caption">{{ . }}</figcaption>
       {{ end }}
+    </figure>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+
 
       {{ with .Params.reviews }}
       <section class="play-section play-reviews">
@@ -337,5 +372,136 @@
   </div>
 
 </div>
+
+<div class="lightbox" data-lightbox aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Production photograph">
+    <button
+      class="lightbox-close"
+      type="button"
+      data-lightbox-close
+      aria-label="Close photograph"
+    >
+      &times;
+    </button>
+
+    <button
+      class="lightbox-nav lightbox-nav--prev"
+      type="button"
+      data-lightbox-prev
+      aria-label="Previous photograph"
+    >
+      &larr;
+    </button>
+
+    <figure class="lightbox-figure">
+      <img class="lightbox-image" data-lightbox-image src="" alt="">
+      <figcaption class="lightbox-caption" data-lightbox-caption></figcaption>
+    </figure>
+
+    <button
+      class="lightbox-nav lightbox-nav--next"
+      type="button"
+      data-lightbox-next
+      aria-label="Next photograph"
+    >
+      &rarr;
+    </button>
+  </div>
+</div>
+
+<script>
+(() => {
+  const gallery = document.querySelector('[data-lightbox-gallery]');
+  const lightbox = document.querySelector('[data-lightbox]');
+
+  if (!gallery || !lightbox) return;
+
+  const triggers = [...gallery.querySelectorAll('[data-lightbox-index]')];
+  const image = lightbox.querySelector('[data-lightbox-image]');
+  const caption = lightbox.querySelector('[data-lightbox-caption]');
+  const prev = lightbox.querySelector('[data-lightbox-prev]');
+  const next = lightbox.querySelector('[data-lightbox-next]');
+  const closeButtons = lightbox.querySelectorAll('[data-lightbox-close]');
+
+  let currentIndex = 0;
+  let lastFocusedElement = null;
+
+  function showImage(index) {
+    currentIndex = (index + triggers.length) % triggers.length;
+
+    const trigger = triggers[currentIndex];
+
+    image.src = trigger.dataset.lightboxSrc;
+    image.alt = trigger.dataset.lightboxAlt || '';
+
+    caption.textContent = trigger.dataset.lightboxCaption || '';
+    caption.hidden = !trigger.dataset.lightboxCaption;
+
+    prev.hidden = triggers.length < 2;
+    next.hidden = triggers.length < 2;
+  }
+
+  function openLightbox(index) {
+    lastFocusedElement = document.activeElement;
+
+    showImage(index);
+
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+
+    closeButtons[0].focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+
+    image.src = '';
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      openLightbox(Number(trigger.dataset.lightboxIndex));
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', closeLightbox);
+  });
+
+  prev.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+  });
+
+  next.addEventListener('click', () => {
+    showImage(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (!lightbox.classList.contains('is-open')) return;
+
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+
+    if (event.key === 'ArrowLeft') {
+      showImage(currentIndex - 1);
+    }
+
+    if (event.key === 'ArrowRight') {
+      showImage(currentIndex + 1);
+    }
+  });
+})();
+</script>
+
 
 {{ end }}

@@ -16,7 +16,7 @@ running_time: 45 Minutes
 form_style: Drama
 staging: What does this do?
 accolades: National Drama Festival Finalist, 2025
-thumbnail: uploads/Songkeeper.jpg
+thumbnail: 
 from_the_desk: "Where does this go? "
 gallery:
   - image: uploads/Songkeeper.jpg

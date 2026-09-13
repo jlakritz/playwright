@@ -94,7 +94,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
 .section { padding: 2.6rem 0; }
 .section-rule { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
 .section-rule::after { content: ""; height: 1px; background: var(--line); flex: 1; }
-.section-title { font-size: clamp(2rem, 9vw, 5rem); margin-bottom: 0.9rem; }
+.section-title { font-size: clamp(2rem, 9vw, 4rem); margin-bottom: 0.9rem; }
 .work-intro { max-width: 52ch; font-size: 1.02rem; margin: 0 0 1.8rem; color: #4f4a43; }
 .work-list { border-top: 1px solid var(--line); }
 
@@ -110,7 +110,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
 }
 .work-item:hover { padding-left: 0.5rem; }
 .work-year { font-family: "DM Mono", monospace; font-size: 0.62rem; line-height: 1.5; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
-.work-item h3 { font-size: clamp(1.9rem, 9vw, 4.2rem); line-height: 0.95; margin: 0.2rem 0 0.5rem; }
+.work-item h3 { font-size: clamp(1.9rem, 9vw, 3rem); line-height: 0.95; margin: 0.2rem 0 0.5rem; }
 .work-meta { font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); }
 .work-desc { max-width: 52ch; margin: 0.4rem 0 0; color: #5b554c; font-size: 0.98rem; }
 .work-thumb { display: none; }
@@ -128,9 +128,9 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
 
 /* Interlude */
 .interlude { background: var(--ink); color: #f6f2ea; padding: 3rem 0; }
-.interlude-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
+.interlude-grid { /*display: grid;*/ grid-template-columns: 1fr; gap: 1.6rem; }
 .interlude .label { font-family: "DM Mono", monospace; text-transform: uppercase; letter-spacing: 0.13em; font-size: 0.62rem; color: #aaa195; }
-.interlude blockquote { margin: 0; max-width: 26ch; }
+.interlude blockquote { margin: 0; }
 .interlude blockquote p { margin: 0; font-size: clamp(1.7rem, 4vw, 4.2rem); line-height: 1.08; }
 .interlude cite { display: block; margin-top: 1.3rem; font-family: "Libre Franklin", Arial, sans-serif; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.11em; color: #aaa195; font-style: normal; }
 @media (min-width: 900px) { .interlude { padding: 6rem 0; } .interlude-grid { grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; } }
@@ -187,7 +187,7 @@ PLAY HEADER
 --------------------------------------------------------------- */
 
 .play-header {
-  border-bottom: 1px solid var(--line);
+ /* border-bottom: 1px solid var(--line);*/
   padding: 1.2rem 0 2.2rem;
   margin-bottom: 2.2rem;
 }
@@ -261,6 +261,12 @@ MAIN GRID
   font-size: 1.7rem;
   line-height: 1;
   margin: 0.25rem 0 1rem;
+}
+
+.play-section > h2:first-of-type,
+.section-heading-row h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
 }
 
 .section-kicker {
@@ -403,41 +409,242 @@ SECTION HEADING WITH COUNT
 PRODUCTION GALLERY
 --------------------------------------------------------------- */
 
+/*.play-gallery {*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr;*/
+/*  gap: 1rem;*/
+/*  margin: 1.5rem 0 0;*/
+/*}*/
+
+/*.play-gallery-item {*/
+/*  border: 1px solid var(--line);*/
+/*  padding: 0.4rem;*/
+/*  background: var(--paper-deep);*/
+/*  margin: 0;*/
+/*}*/
+
+/*.play-gallery-item img {*/
+/*  width: 100%;*/
+/*  aspect-ratio: 16 / 10;*/
+/*  object-fit: cover;*/
+/*  filter: grayscale(12%);*/
+/*  transition: filter 0.25s ease;*/
+/*}*/
+
+/*.play-gallery-item:hover img {*/
+/*  filter: grayscale(0%);*/
+/*}*/
+
+/*.play-gallery-item figcaption {*/
+/*  font-family: "DM Mono", monospace;*/
+/*  font-size: 0.58rem;*/
+/*  line-height: 1.4;*/
+/*  color: var(--muted);*/
+/*  text-transform: uppercase;*/
+/*  letter-spacing: 0.04em;*/
+/*  margin-top: 0.5rem;*/
+/*  padding: 0 0.15rem 0.15rem;*/
+/*}*/
+
+
+/* Production gallery */
+
 .play-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin: 1.5rem 0 0;
+  margin: 1.6rem 0;
 }
 
 .play-gallery-item {
+  margin: 0;
   border: 1px solid var(--line);
   padding: 0.4rem;
   background: var(--paper-deep);
-  margin: 0;
 }
 
-.play-gallery-item img {
+.play-gallery-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  /*cursor: zoom-in;*/
+}
+
+.play-gallery-trigger img {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  filter: grayscale(12%);
-  transition: filter 0.25s ease;
+  filter: grayscale(15%);
+  transition: filter 0.2s ease, opacity 0.2s ease;
 }
 
-.play-gallery-item:hover img {
+.play-gallery-trigger:hover img {
   filter: grayscale(0%);
+  opacity: 0.88;
 }
 
-.play-gallery-item figcaption {
+.play-gallery-caption {
   font-family: "DM Mono", monospace;
-  font-size: 0.58rem;
+  font-size: 0.6rem;
   line-height: 1.4;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
   margin-top: 0.5rem;
-  padding: 0 0.15rem 0.15rem;
+}
+
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 14, 12, 0.94);
+  cursor: zoom-out;
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 100%);
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: calc(100% - 7rem);
+  text-align: center;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  margin-top: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: "Libre Franklin", Arial, sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  opacity: 0.65;
+}
+
+.lightbox-close {
+  top: -1rem;
+  right: 0;
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 300;
+  padding: 0.5rem;
+}
+
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.lightbox-nav--prev {
+  left: 0;
+}
+
+.lightbox-nav--next {
+  right: 0;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (min-width: 700px) {
+  .play-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 699px) {
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-figure {
+    max-width: calc(100% - 2rem);
+  }
+
+  .lightbox-image {
+    max-height: calc(100vh - 6rem);
+  }
+
+  .lightbox-nav {
+    font-size: 1.4rem;
+    padding: 0.75rem;
+  }
+
+  .lightbox-nav--prev {
+    left: -0.5rem;
+  }
+
+  .lightbox-nav--next {
+    right: -0.5rem;
+  }
+
+  .lightbox-close {
+    top: -0.5rem;
+    right: -0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .play-gallery-trigger img,
+  .lightbox-close,
+  .lightbox-nav {
+    transition: none;
+  }
 }
 
 
@@ -453,17 +660,17 @@ REVIEWS
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1px;
+  gap: 1rem;
   margin-top: 1.5rem;
-  border: 1px solid var(--line);
-  background: var(--line);
+  /*border: 1px solid var(--line);
+  background: var(--line);*/
 }
 
 .review-card {
 	grid-column: span 2;
   min-width: 0;
   overflow-wrap: break-word;
-  background: var(--paper);
+  background: var(--paper-deep);
   padding: 1.5rem 1.4rem 1.3rem;
   display: flex;
   flex-direction: column;
@@ -760,7 +967,7 @@ RESPONSIVE MOBILE/DESKTOP
   .reviews-grid--remainder-2 .review-card:last-child {
     grid-column: 1;
     min-height: 0;
-    border: 1px solid var(--line);
+    /*border: 1px solid var(--line);*/
     background: var(--paper-deep);
     padding: 1.4rem 1.3rem 1.25rem;
   }
@@ -793,7 +1000,7 @@ RESPONSIVE MOBILE/DESKTOP
 
   .play-header {
     padding: 1.4rem 0 3.5rem;
-    margin-bottom: 4rem;
+    /*margin-bottom: 4rem;*/
   }
 
   .play-title {
