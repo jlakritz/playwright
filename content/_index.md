@@ -12,7 +12,7 @@ hero_photo_badge: Songkeeper
 hero_photo_caption_left: National Drama Festival 2025
 hero_photo_caption_right: Front of House Photography
 plays_kicker: " "
-plays_title: Most popular plays
+plays_title: Selected work
 plays_lede: The plays I get asked about most, from festival favourites to
   crowd-pleasing comedies.
 press_quote:
