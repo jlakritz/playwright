@@ -191,10 +191,15 @@ content:
         label: Accolades
         type: string
 
-      - name: thumbnail
-        label: Homepage Thumbnail
+      - name: home_image
+        label: Desktop Homepage Image
         type: image
-        description: "Small image shown next to this play in the homepage list (desktop only)."
+        description: "Image used on desktop for the play card."
+
+      - name: home_image_mobile
+        label: Mobile Homepage Image
+        type: image
+        description: "Image used on mobile for the play card."
 
       - name: from_the_desk
         label: "From the Desk (writer's note)"
