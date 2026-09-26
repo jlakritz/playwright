@@ -16,6 +16,7 @@ cast_size: 7 Actors (4W, 3M, flex chorus)
 running_time: 65 Minutes (no interval)
 form_style: Choral Verse / Satire
 accolades: National Drama Festival 2026 Selection
+home_image: uploads/Aviary-home.jpg
 from_the_desk: I started writing this after we came back from Nationals in 2025,
   buzzing off everything we'd seen. Wanted something that wasn't realism —
   theatricality instead. Language that could sing.
