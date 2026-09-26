@@ -17,6 +17,7 @@ form_style: Drama
 staging: What does this do?
 accolades: National Drama Festival Finalist, 2025
 home_image: uploads/SK-home.jpg
+home_image_mobile: uploads/SK-mob.jpg
 from_the_desk: "Where does this go? "
 gallery:
   - image: uploads/Songkeeper.jpg
