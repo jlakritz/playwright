@@ -139,7 +139,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
   position: relative;
   display: block;
   min-width: 0;
-  aspect-ratio: 2.18 / 1;
+  aspect-ratio: 3.6 / 1;
   overflow: hidden;
   background: var(--ink);
   color: #fff;
@@ -279,7 +279,7 @@ h1, h2, h3, h4 { font-family: "Crimson Pro", Georgia, serif; font-weight: 500; l
   }
 
   .work-item {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 2 / 1.42;
   }
 
   .work-content {

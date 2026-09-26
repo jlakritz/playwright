@@ -77,10 +77,12 @@
         {{/* Play information */}}
         <div class="work-content">
 
-          <div class="work-topline">
+<!--         <div class="work-topline">
             <span class="work-number">
               {{ printf "%02d" (add $index 1) }}
             </span>
+
+
 
             <span class="work-year">
               {{ $play.Params.year }}
@@ -89,8 +91,9 @@
             {{ with $play.Params.form_short }}
             <span class="work-form">{{ . }}</span>
             {{ end }}
-          </div>
 
+          </div> 
+-->
           <div class="work-main">
             {{ with $play.Params.genre }}
             <div class="work-meta">{{ . }}</div>
