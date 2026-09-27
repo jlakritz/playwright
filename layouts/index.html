@@ -49,7 +49,7 @@
       {{ $featured := where $plays "Params.featured" true }}
       {{ $toShow := cond (gt (len $featured) 0) $featured $plays }}
 
-      {{ range $index, $play := first 4 (sort $toShow "Params.year" "desc") }}
+      {{ range $index, $play := first 4 (sort $toShow "Params.weight" "asc") }}
 
       <a class="work-item" href="{{ $play.RelPermalink }}">
 
