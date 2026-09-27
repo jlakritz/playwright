@@ -7,6 +7,8 @@ logline: Winner of the 2017 Derek Jacobi Playwriting Award. Later staged at Thea
 featured: true
 weight: 4
 now_playing: false
+home_image: uploads/TSOS-desktop.jpg
+home_image_mobile: uploads/TSOS-mob.jpg
 licensing_status: licensed
 licensor: stagescripts
 licensing_note: Published and available to license now.
