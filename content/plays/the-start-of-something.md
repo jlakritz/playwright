@@ -7,8 +7,6 @@ logline: Winner of the 2017 Derek Jacobi Playwriting Award. Later staged at Thea
 featured: true
 weight: 1
 now_playing: false
-home_image: uploads/TSOS-desktop.jpg
-home_image_mobile: uploads/TSOS-mob.jpg
 licensing_status: licensed
 licensor: stagescripts
 licensing_note: Published and available to license now.
@@ -21,6 +19,8 @@ cast_size: 3 Actors (3F)
 running_time: 50 / 75 Minutes (short and full versions)
 form_style: Monologue Drama
 accolades: Winner, Derek Jacobi Playwriting Award, 2017
+home_image: uploads/TSOS-desktop.jpg
+home_image_mobile: uploads/TSOS-mob.jpg
 gallery:
   - image: uploads/FB_IMG_1789245910329.jpg
     caption: Kate Isitt as Amy, The Drama Wheel, 2017. Photo by Katie Vandyck
@@ -43,7 +43,7 @@ gallery:
 production_history: |-
   Brightlight Theatre, Maidenhead Drama Festival, 2025<br/>
   Brightlight Theatre, Welwyn Drama Festival, 2024<br/>
-  Studio Theatre Company, South Hill Park, <br/> 
+  Studio Theatre Company, South Hill Park, 2019<br/> 
   The Drama Wheel, Theatre503, 2018<br/>
   The Drama Wheel, Brighton Fringe, 2018<br/>
   The Drama Wheel, All Saints Centre, Lewes, 2017<br/>
