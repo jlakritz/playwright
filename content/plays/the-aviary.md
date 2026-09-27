@@ -6,7 +6,7 @@ form_short: Full Play
 logline: A choral verse-play about digital performance, public opinion, and
   collective paralysis.
 featured: true
-weight: 1
+weight: 3
 now_playing: false
 now_playing_detail: 30 July — National Drama Festival, Artrix Theatre
 licensing_status: direct

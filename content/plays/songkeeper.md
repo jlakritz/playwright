@@ -6,7 +6,7 @@ form_short: Two-Hander
 logline: A quiet, tense two-hander about folk music, family inheritance, and
   what happens when the song is remembered wrong.
 featured: true
-weight: 3
+weight: 2
 now_playing: false
 licensing_status: licensed
 licensor: stagescripts

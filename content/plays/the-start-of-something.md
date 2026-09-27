@@ -5,7 +5,7 @@ genre: Award-winning Drama
 form_short: Drama
 logline: Winner of the 2017 Derek Jacobi Playwriting Award. Later staged at Theatre503.
 featured: true
-weight: 4
+weight: 1
 now_playing: false
 home_image: uploads/TSOS-desktop.jpg
 home_image_mobile: uploads/TSOS-mob.jpg
