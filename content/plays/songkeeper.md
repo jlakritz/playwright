@@ -13,7 +13,7 @@ licensor: stagescripts
 licensing_note: Published and available to license now.
 licensing_links:
   - url: https://www.stagescripts.com/products/songkeeper
-    link_text: Available through Stagescripts
+    link_text: View on Stagescripts
 cast_size: "2 Actors (2M) plus optional puppeteers "
 running_time: 45 Minutes
 form_style: Drama
@@ -22,7 +22,8 @@ home_image: uploads/SK-home.jpg
 home_image_mobile: uploads/SK-mob.jpg
 gallery:
   - image: uploads/Songkeeper.jpg
-    caption: Provolov mocks Ambert
+    caption: "Douglas Brown as Provolov and Liam Badcoe as Ambert, Woking Drama
+      Festival. Photo by Front of House Photography "
 production_history: |-
   Woking
   National Drama Festival
@@ -30,5 +31,6 @@ production_history: |-
 awards:
   - title: Best New Play
     venue: Woking Drama Festival, 2025
+reviews:
+  - {}
 ---
-A quiet, tense two-hander about folk music, family inheritance, and what happens when the song is remembered wrong. Intimate, high-tension dialogue that needs two actors willing to sit in uncomfortable silence without rushing the pacing.
