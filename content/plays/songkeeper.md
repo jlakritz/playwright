@@ -11,14 +11,15 @@ now_playing: false
 licensing_status: licensed
 licensor: stagescripts
 licensing_note: Published and available to license now.
-cast_size: 2 Actors (2M)
+licensing_links:
+  - url: https://www.stagescripts.com/products/songkeeper
+    link_text: Available through Stagescripts
+cast_size: "2 Actors (2M) plus optional puppeteers "
 running_time: 45 Minutes
 form_style: Drama
-staging: What does this do?
 accolades: National Drama Festival Finalist, 2025
 home_image: uploads/SK-home.jpg
 home_image_mobile: uploads/SK-mob.jpg
-from_the_desk: "Where does this go? "
 gallery:
   - image: uploads/Songkeeper.jpg
     caption: Provolov mocks Ambert
