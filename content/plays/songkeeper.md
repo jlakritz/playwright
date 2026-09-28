@@ -34,3 +34,4 @@ awards:
 reviews:
   - {}
 ---
+As the stars begin to vanish from the night sky and darkness encroaches, two men embark on a desperate mission to save their island community. Ambert, an idealistic young lamplighter, believes he can reignite the heavens. Provolov, a blind and embittered sailor, reluctantly returns to the sea, haunted by the ghosts of his past. As secrets surface and faith falters, the shadows of their history threaten to extinguish their hope. When the light fades, what will they cling to – and what will it cost?
