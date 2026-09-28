@@ -3,8 +3,8 @@ title: Songkeeper
 year: "2025"
 genre: NDFA Finalist
 form_short: Two-Hander
-logline: A quiet, tense two-hander about folk music, family inheritance, and
-  what happens when the song is remembered wrong.
+logline: "Powerful and imaginative two-hander. Selected for performance at the
+  National Drama Festival. "
 featured: true
 weight: 2
 now_playing: false
