@@ -29,8 +29,12 @@ production_history: |-
   National Drama Festival
   Etc
 awards:
+  - title: Overall Winner
+    venue: Woking Drama Festival, 2024
   - title: Best New Play
-    venue: Woking Drama Festival, 2025
+    venue: Woking Drama Festival, 2024
+  - title: Runner Up
+    venue: Derek Jacobi Playwriting Award, 2025
 reviews:
   - excerpt: A breathtaking performance. So much inventiveness - a stunning piece of
       drama.
