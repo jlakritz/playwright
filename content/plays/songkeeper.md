@@ -15,7 +15,7 @@ licensing_links:
   - url: https://www.stagescripts.com/products/songkeeper
     link_text: View on Stagescripts
 cast_size: "2 Actors (2M) plus optional puppeteers "
-running_time: 45 Minutes
+running_time: 50 minutes
 form_style: Drama
 accolades: National Drama Festival Finalist, 2025
 home_image: uploads/SK-home.jpg
