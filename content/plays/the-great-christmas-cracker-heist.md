@@ -7,8 +7,8 @@ logline: A favourite amongst amateur companies as a great alternative to panto.
 featured: false
 weight: 5
 now_playing: true
-now_playing_detail: Detling Players, Detling Village Hall, 19–21 November
-  2026<br/>East Bergholt Dramatic Society, Constable Hall, 26-28 November 2026
+now_playing_detail: Detling Players, Detling Village Hall, 19–21 November 2026 |
+  East Bergholt Dramatic Society, Constable Hall, 26-28 November 2026
 licensing_status: licensed
 licensor: lazybee
 licensing_links:
