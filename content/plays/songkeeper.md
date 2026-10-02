@@ -33,10 +33,10 @@ gallery:
     caption: "The appearance of the Songkeeper, Woking Drama Festival. Photo by
       Front of House Photography "
 production_history: |-
-  Brightlight Theatre, National Drama Festival, 2025
-  Brightlight Theatre, Welwyn Drama Festival, 2025
-  Brightlight Theatre, Login Lounge, Camberley, 2025
-  Brightlight Theatre, Woking Drama Festival, 2024
+  Brightlight Theatre, National Drama Festival, 2025<br/>
+  Brightlight Theatre, Welwyn Drama Festival, 2025<br/>
+  Brightlight Theatre, Login Lounge, Camberley, 2025<br/>
+  Brightlight Theatre, Woking Drama Festival, 2024<br/>
 awards:
   - title: Overall Winner
     venue: Woking Drama Festival, 2024
