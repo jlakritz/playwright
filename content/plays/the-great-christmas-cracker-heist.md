@@ -14,4 +14,8 @@ licensor: lazybee
 licensing_links:
   - url: https://www.lazybeescripts.co.uk/Scripts/Script.aspx?iSS=2826
     link_text: View on Lazy Bee Scripts
+cast_size: 6F, 5M, 1 Either
+running_time: 1 hour 30 minutes
+form_style: Full length comedy
 ---
+With the office Christmas party and the regular Christmas bonus on the way, life seems good for the staff at DG Crackers. But when things take a turn for the worse, they must take drastic action to get the money they have been banking on…
