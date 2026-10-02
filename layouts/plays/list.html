@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <div class="site-shell">
   <div class="back-bar">
     <a href="{{ "/" | relURL }}" class="btn-back">&larr; Back home</a>
@@ -7,24 +8,102 @@
 
 <section class="section">
   <div class="site-shell">
-    <div class="section-rule"><span class="kicker">All Plays</span></div>
-    <h2 class="section-title">The plays themselves</h2>
-    <p class="work-intro">A selection of full-length plays, verse pieces, and site-specific work — some award-winning, some still finding their audience.</p>
+
+    <div class="section-rule">
+      <span class="kicker">All Plays</span>
+    </div>
+
+    <h2 class="section-title">The full catalogue.</h2>
+
+    <p class="work-intro">
+      A mixture of full length, one act festival plays and Christmas comedies.
+    </p>
 
     <div class="work-list">
-      {{ range (sort .Pages "Params.weight" "asc") }}
-      <a class="work-item" href="{{ .RelPermalink }}">
-        <div class="work-year">{{ .Params.year }}<br>{{ .Params.form_short | default "Full Play" }}</div>
-        <div>
-          <div class="work-meta">{{ .Params.genre }}</div>
-          <h3>{{ .Title }}</h3>
-          <p class="work-desc">{{ .Params.logline }}</p>
-        </div>
-        {{ with .Params.thumbnail }}<img class="work-thumb" src="{{ . | absURL }}" alt="{{ $.Title }} production still">{{ end }}
-        <div class="work-arrow">&rarr;</div>
-      </a>
+
+      {{ range $index, $play := (sort .Pages "Params.weight" "asc") }}
+
+        {{ $desktopImage := $play.Params.home_image }}
+        {{ $mobileImage := $play.Params.home_image_mobile }}
+        {{ $hasImage := or $desktopImage $mobileImage }}
+
+        <a
+          class="work-item{{ if $hasImage }} work-item--has-image{{ else }} work-item--no-image{{ end }}"
+          href="{{ $play.RelPermalink }}"
+        >
+
+          {{/* Artwork */}}
+          {{ if $hasImage }}
+          <div class="work-image" aria-hidden="true">
+            <picture>
+
+              {{ with $mobileImage }}
+              <source
+                media="(max-width: 699px)"
+                srcset="{{ . | absURL }}">
+              {{ end }}
+
+              {{ with $desktopImage }}
+              <img
+                src="{{ . | absURL }}"
+                alt=""
+                loading="lazy">
+              {{ else }}
+              <img
+                src="{{ $mobileImage | absURL }}"
+                alt=""
+                loading="lazy">
+              {{ end }}
+
+            </picture>
+          </div>
+
+          <div class="work-overlay" aria-hidden="true"></div>
+          {{ end }}
+
+
+          {{/* Play information */}}
+          <div class="work-content">
+
+            <div class="work-topline">
+              <span class="work-number">
+                {{ printf "%02d" (add $index 1) }}
+              </span>
+
+              <span class="work-year">
+                {{ $play.Params.year }}
+              </span>
+
+              {{ with $play.Params.form_short }}
+              <span class="work-form">{{ . }}</span>
+              {{ end }}
+            </div>
+
+
+            <div class="work-main">
+
+              {{ with $play.Params.genre }}
+              <div class="work-meta">{{ . }}</div>
+              {{ end }}
+
+              <h3>{{ $play.Title }}</h3>
+
+              {{ with $play.Params.logline }}
+              <p class="work-desc">{{ . }}</p>
+              {{ end }}
+
+            </div>
+
+            <span class="work-arrow" aria-hidden="true">&rarr;</span>
+
+          </div>
+        </a>
+
       {{ end }}
+
     </div>
+
   </div>
 </section>
+
 {{ end }}
