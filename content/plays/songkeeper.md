@@ -25,9 +25,10 @@ gallery:
     caption: "Douglas Brown as Provolov and Liam Badcoe as Ambert, Woking Drama
       Festival. Photo by Front of House Photography "
 production_history: |-
-  Woking
-  National Drama Festival
-  Etc
+  Brightlight Theatre, National Drama Festival, 2025
+  Brightlight Theatre, Welwyn Drama Festival, 2025
+  Brightlight Theatre, Login Lounge, Camberley, 2025
+  Brightlight Theatre, Woking Drama Festival, 2024
 awards:
   - title: Overall Winner
     venue: Woking Drama Festival, 2024
