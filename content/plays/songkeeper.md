@@ -24,6 +24,14 @@ gallery:
   - image: uploads/Songkeeper.jpg
     caption: "Douglas Brown as Provolov and Liam Badcoe as Ambert, Woking Drama
       Festival. Photo by Front of House Photography "
+  - image: uploads/FOHP5143-Edit.jpg
+    caption: "Jenny Glaves as Lark, Woking Drama Festival. Photo by Front of House
+      Photography "
+  - image: uploads/FOHP3795-Edit.jpg
+    caption: "The boat, Woking Drama Festival. Photo by Front of House Photography "
+  - image: uploads/FOHP3803-Edit.jpg
+    caption: "The appearance of the Songkeeper, Woking Drama Festival. Photo by
+      Front of House Photography "
 production_history: |-
   Brightlight Theatre, National Drama Festival, 2025
   Brightlight Theatre, Welwyn Drama Festival, 2025
