@@ -6,7 +6,7 @@ form_short: Two-Hander
 logline: "Powerful and imaginative two-hander. Selected for performance at the
   National Drama Festival. "
 featured: true
-weight: 2
+weight: 3
 now_playing: false
 licensing_status: licensed
 licensor: stagescripts
