@@ -17,5 +17,6 @@ licensing_links:
 cast_size: 6F, 5M, 1 Either
 running_time: 1 hour 30 minutes
 form_style: Full length comedy
+home_image: uploads/TheGreatChristmasCrackerHeistLogo.jpg
 ---
 With the office Christmas party and the regular Christmas bonus on the way, life seems good for the staff at DG Crackers. But when things take a turn for the worse, they must take drastic action to get the money they have been banking on…
