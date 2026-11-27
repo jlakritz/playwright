@@ -1,7 +1,7 @@
 ---
 title: The Aviary
 year: "2026"
-genre: NDFA Finalist
+genre: Featured in SCDA's 100 Plays
 form_short: Drama
 logline: Multi award-winning choral verse-play - Under Milk Wood meets Black Mirror.
 featured: true
