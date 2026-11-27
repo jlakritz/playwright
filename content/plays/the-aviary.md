@@ -5,7 +5,7 @@ genre: NDFA Finalist
 form_short: Drama
 logline: Multi award-winning choral verse-play - Under Milk Wood meets Black Mirror.
 featured: true
-weight: 3
+weight: 2
 now_playing: false
 licensing_status: direct
 licensing_note: Available for production by direct arrangement - get in touch to
@@ -73,5 +73,11 @@ reviews:
   - excerpt: Some people laugh in the face of danger. I think Brightlight Theatre
       poke danger in the eye and steal its car.
     source: Dr. Tristan Marshall, GODA Adjudicator
+  - excerpt: "This is a verbally and visually stunning script. The demands it puts
+      on an imaginative director are through the roof but in the hands of a top
+      table theatre group the sky’s the limit to how this can be presented.
+      Lakritz’s star as a writer is on the ascendant. "
+    source: Scottish Community Drama - 100 Plays
+    review_url: https://drama.scot/wp-content/uploads/2026/11/100-plays-Booklet.pdf
 ---
 In the cul-de-sac of The Aviary, the bird-people residents are trapped in the branches of the Parapara - a bird-catcher tree, whose sweet seeds and sticky sap bind its captives. Over the course of a single day, a peacock preens for invisible followers, a messenger bird trades in gossip, an ostrich drowns in a flood she refuses to acknowledge, and a timid parrot edges toward the cage door. A choral verse-play in the tradition of Under Milk Wood, The Aviary is a dark comedy about performance, paralysis, and the trap that sings us to sleep.
