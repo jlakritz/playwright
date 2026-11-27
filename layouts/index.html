@@ -8,8 +8,8 @@
       <div>
         <div class="kicker">{{ .Params.hero_kicker | default "Playwright · Theatre Maker" }}</div>
         <h1>{{ .Params.hero_title | default "Jamie<br>Lakritz" | safeHTML }}</h1>
-        <p class="lede">{{ .Params.hero_lede | default "Writing plays about people, power, technology, history — and the things we would rather not talk about." }}</p>
-        {{ with .Params.hero_margin_note }}<p class="margin-note">{{ . }}</p>{{ end }}
+        <p class="lede">{{ .Params.hero_lede | default "Writing plays about people, power, technology, history — and the things we would rather not talk about."  | safeHTML }}</p>
+        {{ with .Params.hero_margin_note }}<p class="margin-note">{{ .  | safeHTML }}</p>{{ end }}
       </div>
 
       {{ with .Params.hero_photo }}
