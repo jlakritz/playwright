@@ -14,7 +14,7 @@
         <div class="now-playing__items">
           {{ range $current }}
           <a href="{{ .RelPermalink }}" class="now-playing__item">
-            <strong>{{ .Title }}</strong> <span>&mdash; {{ .Params.now_playing_detail }}</span>
+            <strong>{{ .Title }}</strong> <span>&mdash; {{ .Params.now_playing_detail | markdownify }}</span>
           </a>
           {{ end }}
         </div>
