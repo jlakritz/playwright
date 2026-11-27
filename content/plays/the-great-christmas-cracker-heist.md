@@ -4,7 +4,7 @@ year: "2016"
 genre: Popular Christmas comedy
 form_short: Festive favourite
 logline: A favourite amongst amateur companies as a great alternative to panto.
-featured: false
+featured: true
 weight: 5
 now_playing: true
 now_playing_detail: Detling Players, Detling Village Hall, 19–21 November 2026 |
