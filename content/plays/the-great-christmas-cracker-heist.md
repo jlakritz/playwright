@@ -24,12 +24,12 @@ gallery:
   - image: uploads/videoframe_6388.png
     caption: Detling Players, Photo by Detling Players
 production_history: |-
-  East Bergholt Dramatic Society, Suffolk, Nov 2026
-  Detling Players, Detling, Nov 2026
-  Highworth Amateur Dramatics Society, Swindon, Dec 2025
-  Heretaunga Players, New Zealand, Nov 2024
-  The Reformed Players, Nottingham, Nov 2023
-  Beeston Players, Beeston, Nov 2022
+  East Bergholt Dramatic Society, Suffolk, Nov 2026<br/>
+  Detling Players, Detling, Nov 2026<br/>
+  Highworth Amateur Dramatics Society, Swindon, Dec 2025<br/>
+  Heretaunga Players, New Zealand, Nov 2024<br/>
+  The Reformed Players, Nottingham, Nov 2023<br/>
+  Beeston Players, Beeston, Nov 2022<br/>
   Brightlight Theatre, Frimley, Dec 2016
 reviews:
   - excerpt: The script is wonderfully witty and the double twist at the end came as
