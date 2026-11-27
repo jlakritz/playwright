@@ -72,9 +72,6 @@ awards:
   - title: Technical Excellence
     venue: National Drama Festival, 2026
 reviews:
-  - excerpt: Some people laugh in the face of danger. I think Brightlight Theatre
-      poke danger in the eye and steal its car.
-    source: Dr. Tristan Marshall, GODA Adjudicator
   - excerpt: "This is a verbally and visually stunning script. The demands it puts
       on an imaginative director are through the roof but in the hands of a top
       table theatre group the sky’s the limit to how this can be presented.
