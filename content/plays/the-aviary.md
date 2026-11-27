@@ -80,3 +80,5 @@ reviews:
     review_url: https://drama.scot/wp-content/uploads/2026/11/100-plays-Booklet.pdf
 ---
 In the cul-de-sac of The Aviary, the bird-people residents are trapped in the branches of the Parapara - a bird-catcher tree, whose sweet seeds and sticky sap bind its captives. Over the course of a single day, a peacock preens for invisible followers, a messenger bird trades in gossip, an ostrich drowns in a flood she refuses to acknowledge, and a timid parrot edges toward the cage door. A choral verse-play in the tradition of Under Milk Wood, The Aviary is a dark comedy about performance, paralysis, and the trap that sings us to sleep.
+
+Selected as one of the 100 Plays to perform by the Scottish Community Drama Association.
