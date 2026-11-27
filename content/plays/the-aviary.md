@@ -65,6 +65,8 @@ production_history: |-
   Brightlight Theatre, Henley Drama Festival, 2026<br/>
   Brightlight Theatre, Maidenhead Drama Festival, 2026
 awards:
+  - title: Featured in Scottish Community Drama's list of 100 Plays to perform
+    venue: Scottish Community Drama Association
   - title: Winner - Best New Play, Best Actress, Best Stage Presentation
     venue: Henley Drama Festival, 2026
   - title: Technical Excellence
