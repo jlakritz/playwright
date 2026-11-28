@@ -95,11 +95,13 @@
           </div> 
 -->
           <div class="work-main">
+
             {{ with $play.Params.genre }}
             <div class="work-meta">{{ . }}</div>
             {{ end }}
 
             <h3>{{ $play.Title }}</h3>
+
 
             {{ with $play.Params.logline }}
             <p class="work-desc">{{ . }}</p>
